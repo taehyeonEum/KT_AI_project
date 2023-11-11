@@ -1,0 +1,13 @@
+cd Grounded-Segment-Anything
+
+wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+wget https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+
+
+print("####################################")
+print("////////////////////////////////////")
+print("************************************")
+
+CUDA_VISIBLE_DEVICES=0 python grounded_sam_simple_demo.py 2>&1 | tee -a ./logs/grounded_sam_simple_demo_1109_1.log
+CUDA_VISIBLE_DEVICES=0 python langchain.py 2>&1 | tee -a ./logs/langchain_1109_1.log
+CUDA_VISIBLE_DEVICES=0 python langchain_je.py 2>&1 | tee -a ./logs/langchain_1109_4.log

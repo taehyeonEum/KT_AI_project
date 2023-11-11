@@ -1,0 +1,33 @@
+Detections(xyxy=array([[204.80188 , 146.85254 , 298.17764 , 223.25366 ],
+       [388.03534 , 290.52283 , 432.3512  , 323.94464 ],
+       [ 78.035995, 299.67517 , 127.26997 , 321.89618 ]], dtype=float32), mask=None, confidence=array([0.8248828 , 0.5592095 , 0.50679314], dtype=float32), class_id=array([0, 1, 1]), tracker_id=None)
+
+detections
+Detections(xyxy=array([[159.03229, 258.09476, 322.15384, 410.87552],
+       [214.7249 , 204.23674, 511.93237, 511.6482 ],
+       [ 41.80127, 267.61737, 129.06541, 428.7309 ]], dtype=float32), mask=None, confidence=array([0.90639746, 0.8488328 , 0.45664147], dtype=float32), class_id=array([2, 1, 0]), tracker_id=None)
+
+detections
+Detections(xyxy=array([[108.954796, 311.94727 , 150.17194 , 378.0948  ],
+       [241.66649 , 305.34192 , 358.13586 , 444.4698  ]], dtype=float32), mask=None, confidence=array([0.5460422 , 0.42306852], dtype=float32), class_id=array([1, 0]), tracker_id=None)
+
+detections
+Detections(xyxy=array([[1.3319814e+02, 1.9691891e+02, 3.8607843e+02, 3.6155515e+02],
+       [3.3385834e+02, 3.9680481e-01, 4.2894781e+02, 3.4286835e+02]],
+      dtype=float32), mask=None, confidence=array([0.90003693, 0.847397  ], dtype=float32), class_id=array([0, 1]), tracker_id=None)
+
+detections
+Detections(xyxy=array([[336.87057, 391.4023 , 357.29904, 405.52072],
+       [201.44302, 188.84218, 363.87534, 367.24518],
+       [245.10777, 381.73944, 321.3021 , 399.49518],
+       [148.15417, 308.8793 , 167.6214 , 369.07645]], dtype=float32), mask=None, confidence=array([0.9315191 , 0.93288374, 0.8460881 , 0.6878436 ], dtype=float32), class_id=array([3, 0, 2, 1]), tracker_id=None)
+
+
+detections
+Detections(xyxy=array([[105.20801 , 226.0678  , 363.78262 , 387.86224 ],
+       [174.93738 , 348.50165 , 294.57727 , 439.52106 ],
+       [ 45.239468, 284.1943  , 102.81752 , 378.77097 ],
+       [257.53262 , 228.1542  , 297.0021  , 299.29495 ],
+       [138.98811 , 224.34279 , 171.8087  , 297.09967 ],
+       [170.00027 , 226.94466 , 207.8122  , 300.44666 ]], dtype=float32), mask=None, confidence=array([0.8502232 , 0.40041095, 0.53860277, 0.45368665, 0.41467178,
+       0.43599352], dtype=float32), class_id=array([1, 0, 0, 2, 2, 2]), tracker_id=None)
