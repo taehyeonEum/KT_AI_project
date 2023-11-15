@@ -36,7 +36,7 @@ Question: {question}
 """
 
 prompt = PromptTemplate(template=template, input_variables=["question"])
-llm = OpenAI(model_name="text-davinci-003",openai_api_key="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")
+llm = OpenAI(model_name="text-davinci-003",openai_api_key="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")
 llm_chain = LLMChain(prompt=prompt, llm=llm)
 
 # question = "Please reduce the area of the pillow located on the far right and move it to the left side of the sofa."
@@ -47,6 +47,53 @@ print("llm_chain_run(question)")
 output= llm_chain.run(question)
 print(output)
 print("////////////////////////////////////")
+
+# '\nAnswer:' 부분 제거
+output_string = output.split('Answer: ')[1] # 해당 값 grounding dino로 보내기 
+
+# 결과 출력
+print(output_string)
+
+# # (2) Grounding DINO 
+
+# get_ipython().run_line_magic('cd', '/home/libra/vscode_ji/kt_project')
+HOME = os.getcwd()
+print(HOME)
+
+# get_ipython().run_line_magic('cd', '{HOME}')
+# !git clone https://github.com/IDEA-Research/GroundingDINO.git
+# get_ipython().run_line_magic('cd', '{HOME}/GroundingDINO')
+# !pip install -q -e .
+
+# '\nAnswer:' 부분 제거
+output_string = output.split('Answer: ')[1] # 해당 값 grounding dino로 보내기 
+
+# 결과 출력
+print(output_string)
+
+# # (2) Grounding DINO 
+
+# get_ipython().run_line_magic('cd', '/home/libra/vscode_ji/kt_project')
+HOME = os.getcwd()
+print(HOME)
+
+# get_ipython().run_line_magic('cd', '{HOME}')
+# !git clone https://github.com/IDEA-Research/GroundingDINO.git
+# get_ipython().run_line_magic('cd', '{HOME}/GroundingDINO')
+# !pip install -q -e .
+# !pip install -q roboflow
+
+CONFIG_PATH = "./GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
+
+# print(CONFIG_PATH, "; exist:", os.path.isfile(CONFIG_PATH))
+# get_ipython().run_line_magic('cd', '{HOME}')
+# get_ipython().system('mkdir {HOME}/weights')
+# get_ipython().run_line_magic('cd', '{HOME}/weights')
+# !wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+
+
+# ----
+
 
 # '\nAnswer:' 부분 제거
 output_string = output.split('Answer: ')[1] # 해당 값 grounding dino로 보내기 
@@ -108,7 +155,7 @@ TEXT_PROMPT = output_string
 BOX_TRESHOLD = 0.35
 TEXT_TRESHOLD = 0.1
 
-print(TEXT_PROMPT)
+print('text prompt', TEXT_PROMPT)
 
 image_source, image = load_image(IMAGE_PATH)
 # image_source shape : (806, 808, 3)
@@ -210,8 +257,8 @@ for box in convert_xy(boxes0):
 
 
 # 변환된 bbox 값 도출 
-convert_xy(boxes0)
-
+conv= convert_xy(boxes0)
+print('convert', conv)
 
 # ---
 
@@ -323,7 +370,7 @@ chat_prompt = ChatPromptTemplate.from_messages([
     ("system", template),
     ("human", human_template),
 ])
-chain = chat_prompt | ChatOpenAI(openai_api_key = "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", temperature=1) | CommaSeparatedListOutputParser()
+chain = chat_prompt | ChatOpenAI(openai_api_key = "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", temperature=1) | CommaSeparatedListOutputParser()
 output= chain.invoke({"instruction": question, "bounding_box_coordinates": ','.join(labels)})
 
 

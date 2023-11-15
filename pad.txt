@@ -11,3 +11,5 @@ print("************************************")
 CUDA_VISIBLE_DEVICES=0 python grounded_sam_simple_demo.py 2>&1 | tee -a ./logs/grounded_sam_simple_demo_1109_1.log
 CUDA_VISIBLE_DEVICES=0 python langchain.py 2>&1 | tee -a ./logs/langchain_1109_1.log
 CUDA_VISIBLE_DEVICES=0 python langchain_je.py 2>&1 | tee -a ./logs/langchain_1109_4.log
+
+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
