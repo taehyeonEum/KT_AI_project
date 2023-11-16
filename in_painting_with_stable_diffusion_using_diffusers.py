@@ -62,24 +62,46 @@ def inpainting(idx, result):
     # bbox = [ 25, 200, 150, 430 ] # img_1 drawer_2 bigger -> middle success
     # bbox = [ 175.44302, 150.84218, 370.87534, 370.24518] # img_4 monitor_2 bigger -> success
 
+
+    MODE = result["mode"]
     IMAGE_NAME = result["i_name"]
     OBJECT_NAME = result["target"]
     BBOX = result["nbox"]
-
 
     IMAGE_PATH = os.path.join("./content", IMAGE_NAME)
     SOURCE_PATH = os.path.join("./outputs_grounded_sam", IMAGE_NAME, OBJECT_NAME)
 
     OUTPUT_BASE_DIR = f"./outputs_inpaintings"
 
-    OUTPUT_DIR=os.path.join(OUTPUT_BASE_DIR, str(idx),  IMAGE_NAME, OBJECT_NAME)
+    OUTPUT_DIR=os.path.join(OUTPUT_BASE_DIR, IMAGE_NAME, OBJECT_NAME, str(idx))
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     from PIL import Image
 
+
     image = Image.open(IMAGE_PATH)
     image = image.resize((512, 512))
     image.save(os.path.join(OUTPUT_DIR, "original_image.jpg"))
+    
+    if MODE == 'smaller' or 'move' :
+        print("MODE= ", MODE)
+        prompt = "background"
+        guidance_scale=9
+        num_samples = 1
+        generator = torch.Generator(device="cuda").manual_seed(1) # change the seed to get different results
+        object_mask = Image.open(os.path.join(SOURCE_PATH, "mask.jpg"))
+
+        object_removed_images = pipe(
+        prompt=prompt,
+        image=image,
+        mask_image=object_mask,
+        guidance_scale=guidance_scale,
+        generator=generator,
+        num_images_per_prompt=num_samples,).images
+        
+        object_removed_image = object_removed_images[0]
+        object_removed_image.save(os.path.join(OUTPUT_DIR, "object_removed_image.jpg"))
+        image = object_removed_image
 
 
     bbox = [int(x) for x in BBOX]
@@ -107,10 +129,6 @@ def inpainting(idx, result):
 
     print("contour_mask")
     print(contour_mask.size)
-
-    # contour_mask.save(os.path.join(OUTPUT_DIR, "resized_cropped_contour_mask.jpg"), mode="RGB")
-    # 
-    # mask_image = Image.open("/content/output_image (2)_mask.png").resize((512, 512))
 
     prompt = "background"
 

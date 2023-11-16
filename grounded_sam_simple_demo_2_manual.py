@@ -15,55 +15,54 @@ import re
 import torch
 import torchvision
 
-from langchain.llms import OpenAI
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+# from langchain.llms import OpenAI
+# from langchain.prompts import PromptTemplate
+# from langchain.chains import LLMChain
 
-from langchain.chat_models import ChatOpenAI
-from langchain.prompts.chat import (
-    ChatPromptTemplate,
-    SystemMessagePromptTemplate,
-    HumanMessagePromptTemplate,
-)
-from langchain.chains import LLMChain
-from langchain.schema import BaseOutputParser
+# from langchain.chat_models import ChatOpenAI
+# from langchain.prompts.chat import (
+#     ChatPromptTemplate,
+#     SystemMessagePromptTemplate,
+#     HumanMessagePromptTemplate,
+# )
+# from langchain.chains import LLMChain
+# from langchain.schema import BaseOutputParser
 
 from groundingdino.util.inference import Model
 from segment_anything import sam_model_registry, SamPredictor
 
 
-template = """
-Extract only objects names.
+# template = """
+# Extract only objects names.
 
-Question: {question} 
+# Question: {question} 
 
-"""
-OPEN_AI_API_KEY =  "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"
+# """
 
-prompt = PromptTemplate(template=template, input_variables=["question"])
-llm = OpenAI(model_name="text-davinci-003",openai_api_key=OPEN_AI_API_KEY)
-llm_chain = LLMChain(prompt=prompt, llm=llm)
+# prompt = PromptTemplate(template=template, input_variables=["question"])
+# llm = OpenAI(model_name="text-davinci-003",openai_api_key="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")
+# llm_chain = LLMChain(prompt=prompt, llm=llm)
 
-# question = "Please reduce the area of the pillow located on the far right and move it to the left side of the sofa."
-# question = "Please reduce the area of the pillow located at the far right and move it onto the table in front of the sofa."
-question = "Make the tv much bigger."
+# # question = "Please reduce the area of the pillow located on the far right and move it to the left side of the sofa."
+# # question = "Please reduce the area of the pillow located at the far right and move it onto the table in front of the sofa."
+# question = "Make the tv much bigger."
 
-print("////////////////////////////////////")
-print("llm_chain_run(question)")
-output= llm_chain.run(question)
-print(output)
-print("////////////////////////////////////")
+# print("////////////////////////////////////")
+# print("llm_chain_run(question)")
+# output= llm_chain.run(question)
+# print(output)
+# print("////////////////////////////////////")
 
-# '\nAnswer:' 부분 제거
-output_string = output.split(': ')[1] # 해당 값 grounding dino로 보내기 
+# # '\nAnswer:' 부분 제거
+# output_string = output.split(': ')[1] # 해당 값 grounding dino로 보내기 
 
-# 결과 출력
-print("-----------output_string-----------")
-print(output_string)
+# # 결과 출력
+# print("-----------output_string-----------")
+# print(output_string)
 
-lang_classes = output_string.split(", ")
+# lang_classes = output_string.split(", ")
 
-def gpt_grounded_sam(image_nname, mode):
+def gpt_grounded_sam(image_nname, object, mode):
     IMAGE_NAME = image_nname
     print("IMAGE_NAME")
     print(IMAGE_NAME)
@@ -110,12 +109,12 @@ def gpt_grounded_sam(image_nname, mode):
     # print(image_classes)
     # SOURCE_IMAGE_PATH = image_paths[CURRENT_IMG_NUM]
 
-    OUTPUT_DIR = f"./outputs_grounded_sam/{IMAGE_NAME}"
+    OUTPUT_DIR = f"./outputs_grounded_sam_manual/{IMAGE_NAME}"
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     SOURCE_IMAGE_PATH = os.path.join(IMAGE_DIR, IMAGE_NAME)
     # CLASSES = image_classes[CURRENT_IMG_NUM]
-    CLASSES = lang_classes
+    CLASSES = object.split(" ")
     BOX_THRESHOLD = 0.35
     TEXT_THRESHOLD = 0.4
     NMS_THRESHOLD = 0.8
@@ -215,7 +214,7 @@ def gpt_grounded_sam(image_nname, mode):
 
 
     masks = np.array(detections.mask, dtype=np.uint8)
-    # masks = np.squeeze(masks)
+    masks = np.squeeze(masks)
     # print(mask.max()) # 1
     masks = masks * 256
 
@@ -250,14 +249,14 @@ def gpt_grounded_sam(image_nname, mode):
         y_max = math.ceil(y_max)
         
         # make mask thicker
-        # if x_min > 30: 
-        #     x_min = x_min - 30
-        # if y_min > 30: 
-        #     y_min = y_min - 30
-        # if x_max < (512-30): 
-        #     x_max = x_max + 30
-        # if y_max < (512-30): 
-        #     y_max = y_max + 30
+        if x_min > 30: 
+            x_min = x_min - 30
+        if y_min > 30: 
+            y_min = y_min - 30
+        if x_max < (512-30): 
+            x_max = x_max + 30
+        if y_max< (512-30): 
+            y_max = y_max + 30
 
         # print("x_min y_min x_max y_max")
         # print(x_min, y_min, x_max, y_max)
@@ -286,18 +285,19 @@ def gpt_grounded_sam(image_nname, mode):
 
         cropped_image = image[y_min:y_max, x_min:x_max, :]
         # make mask thicker
-        # if x_min > 30: 
-        #     x_min = x_min - 30
-        # if y_min > 30: 
-        #     y_min = y_min - 30
-        # if x_max < (512-30): 
-        #     x_max = x_max + 30
-        # if y_max < (512-30): 
-        #     y_max = y_max + 30
+        if x_min > 30: 
+            x_min = x_min - 30
+        if y_min > 30: 
+            y_min = y_min - 30
+        if x_max < (512-30): 
+            x_max = x_max + 30
+        if y_max< (512-30): 
+            y_max = y_max + 30
         cropped_mask = mask[y_min:y_max, x_min:x_max]
         return cropped_image, cropped_mask
 
 
+    # dictionary로 바꿀필요 있음
     square_masks = []
     anti_masks = []
     contour_masks = []
@@ -367,91 +367,91 @@ def gpt_grounded_sam(image_nname, mode):
     annotated_image = box_annotator.annotate(scene=annotated_image, detections=detections, labels=labels)
 
     # save the annotated grounded-sam image
-    OUTPUT_DIR = f"./outputs_grounded_sam/{IMAGE_NAME}"
+    OUTPUT_DIR = f"./outputs_grounded_sam_manual/{IMAGE_NAME}"
     cv2.imwrite(os.path.join(OUTPUT_DIR,f"grounded_sam_annotated_image_{IMAGE_NAME}.jpg"), cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
 
-    class CommaSeparatedListOutputParser(BaseOutputParser):
-        def parse(self, text: str):
-            return text.strip().split(", ")
+    # class CommaSeparatedListOutputParser(BaseOutputParser):
+    #     def parse(self, text: str):
+    #         return text.strip().split(", ")
 
-    template = """
-    Let’s imagine you’re a semantic parser. I’ll provide specific bounding box coordinates and
-    instructions. These coordinates represent the [(left corner x, y values), (right corner x, y values)]
-    of the bounding box. Extract the action and target from the instructions and new bounding
-    box coordinates, noting the association between bounding box coordinates and the target. Also,
-    bounding box coordinates should not exceed the frame size [(0,0), (512, 512)].  Then, adjust the
-    bounding box using expected values and display the resulting coordinates as the output. Let’s think step by step.
+    # template = """
+    # Let’s imagine you’re a semantic parser. I’ll provide specific bounding box coordinates and
+    # instructions. These coordinates represent the [(left corner x, y values), (right corner x, y values)]
+    # of the bounding box. Extract the action and target from the instructions and new bounding
+    # box coordinates, noting the association between bounding box coordinates and the target. Also,
+    # bounding box coordinates should not exceed the frame size [(0,0), (512, 512)].  Then, adjust the
+    # bounding box using expected values and display the resulting coordinates as the output. Let’s think step by step.
 
-    condition : 
-    First, please maintain the width-to-height ratio of the box.
-    Second, unless the object is moving, please execute the insturction with the left corner x, y values of the box fixed.
-    Third, represent the coordinates as integers.
+    # condition : 
+    # First, please maintain the width-to-height ratio of the box.
+    # Second, unless the object is moving, please execute the insturction with the left corner x, y values of the box fixed.
+    # Third, represent the coordinates as integers.
 
-    For example:
+    # For example:
     
-    insturction = The pillow located on the far right is reduced in area and moved to the left of the sofa
+    # insturction = The pillow located on the far right is reduced in area and moved to the left of the sofa
 
-    Bounding Box Coordinates: [
-        'Sofa_0 [105 226 363 387]', 
-        'Table_1 [45 284 102 378]', 
-        'Pillow_2 [257 227 297 300]', 
-        'Pillow_3 [139 224 172 297]', 
-        'Pillow_4 [170 226 208 301]', 
-        'Table_5 [174 348 294 439] 
-        ]
+    # Bounding Box Coordinates: [
+    #     'Sofa_0 [105 226 363 387]', 
+    #     'Table_1 [45 284 102 378]', 
+    #     'Pillow_2 [257 227 297 300]', 
+    #     'Pillow_3 [139 224 172 297]', 
+    #     'Pillow_4 [170 226 208 301]', 
+    #     'Table_5 [174 348 294 439] 
+    #     ]
     
-    output = [
-        'action': 'the pillow located on the far right is reduced in area','target': 'pillow_2',  nbox': [(427 188 467 218)],
-        'action': 'moved to the left of the sofa','target': 'pillow_2', 'nbox': [(174 185 214 215)]
-    ]"""
+    # output = [
+    #     'action': 'the pillow located on the far right is reduced in area','target': 'pillow_2',  nbox': [(427 188 467 218)],
+    #     'action': 'moved to the left of the sofa','target': 'pillow_2', 'nbox': [(174 185 214 215)]
+    # ]"""
 
-    system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+    # system_message_prompt = SystemMessagePromptTemplate.from_template(template)
 
-    human_template = """
-    Instruction : {instruction}. Please remind the condition.
+    # human_template = """
+    # Instruction : {instruction}. Please remind the condition.
 
-    Bounding Box Coordinates: {bounding_box_coordinates}
+    # Bounding Box Coordinates: {bounding_box_coordinates}
 
-    The output is returned in the form of a dictionary.
-    Output:"""
+    # The output is returned in the form of a dictionary.
+    # Output:"""
 
-    chat_prompt = ChatPromptTemplate.from_messages([
-        ("system", template),
-        ("human", human_template),
-    ])
-    chain = chat_prompt | ChatOpenAI(openai_api_key = OPEN_AI_API_KEY, temperature=1) | CommaSeparatedListOutputParser()
-    output= chain.invoke({"instruction": question, "bounding_box_coordinates": ','.join(lang_chain_input)})
+    # chat_prompt = ChatPromptTemplate.from_messages([
+    #     ("system", template),
+    #     ("human", human_template),
+    # ])
+    # chain = chat_prompt | ChatOpenAI(openai_api_key = "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", temperature=1) | CommaSeparatedListOutputParser()
+    # output= chain.invoke({"instruction": question, "bounding_box_coordinates": ','.join(lang_chain_input)})
 
-    print("---------gpt_raw_output---------")
-    print(output)
+    # print("---------gpt_raw_output---------")
+    # print(output)
 
-    formatted_text_string = " ".join(output)
+    # formatted_text_string = " ".join(output)
 
-    print(formatted_text_string)
-    print(type(formatted_text_string))
+    # print(formatted_text_string)
+    # print(type(formatted_text_string))
 
-    input_string = formatted_text_string
+    # input_string = formatted_text_string
 
 
-    # 정규 표현식을 사용하여 target 값과 nbox 값 추출
-    targets = re.findall(r"'target': '(.*?)'", input_string)
-    nbox_values = re.findall(r"\(([\d.]+ [\d.]+ [\d.]+ [\d.]+)\)", input_string)
+    # # 정규 표현식을 사용하여 target 값과 nbox 값 추출
+    # targets = re.findall(r"'target': '(.*?)'", input_string)
+    # nbox_values = re.findall(r"\(([\d.]+ [\d.]+ [\d.]+ [\d.]+)\)", input_string)
 
-    # nbox 값을 실수로 변환하고 리스트로 구성
-    nbox_list = [[float(coord) for coord in box.split()] for box in nbox_values]
+    # # nbox 값을 실수로 변환하고 리스트로 구성
+    # nbox_list = [[float(coord) for coord in box.split()] for box in nbox_values]
+
+    
+    # result = []
+    # for i in range(len(targets)):
+    #     result.append({'i_name':IMAGE_NAME, 'target': targets[i], 'nbox': nbox_list[i], 'mode': mode})
+
+    # # 결과 출력
+    # print("----------final_result-----------")
+    # print(result)
 
     # 결과 딕셔너리 생성
-    # result = [{'target': targets[0], 'nbox': nbox_list[0]},
-    #         {'target': targets[1], 'nbox': nbox_list[1]}]
-    
-    result = []
-    for i in range(len(targets)):
-        result.append({'i_name':IMAGE_NAME, 'target': targets[i], 'nbox': nbox_list[i], 'mode': mode})
 
-    # 결과 출력
-    print("----------final_result-----------")
-    print(result)
-
+    result={'i_name':IMAGE_NAME, 'object':object, 'mode':mode, 'bbox': detections.xyxy[0]}
     return result
 
 
@@ -460,8 +460,10 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--image_name", type=str)
+    parser.add_argument("--object", type=str)
+    parser.add_argument("--mode", type=str)
 
     args = parser.parse_args()
 
 
-    gpt_grounded_sam(args.image_name)
+    gpt_grounded_sam(args.image_name, args.object, args.mode)
