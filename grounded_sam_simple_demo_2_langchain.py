@@ -32,38 +32,38 @@ from groundingdino.util.inference import Model
 from segment_anything import sam_model_registry, SamPredictor
 
 
-template = """
-Extract only objects names.
+def gpt_grounded_sam(image_nname, ex_num, question):
 
-Question: {question} 
+    template = """
+    Extract only objects names.
 
-"""
-OPEN_AI_API_KEY =  "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"
+    Question: {question} 
 
-prompt = PromptTemplate(template=template, input_variables=["question"])
-llm = OpenAI(model_name="text-davinci-003",openai_api_key=OPEN_AI_API_KEY)
-llm_chain = LLMChain(prompt=prompt, llm=llm)
+    """
+    OPEN_AI_API_KEY =  "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"
 
-# question = "Please reduce the area of the pillow located on the far right and move it to the left side of the sofa."
-# question = "Please reduce the area of the pillow located at the far right and move it onto the table in front of the sofa."
-question = "Make the tv much bigger."
+    prompt = PromptTemplate(template=template, input_variables=["question"])
+    llm = OpenAI(model_name="text-davinci-003",openai_api_key=OPEN_AI_API_KEY)
+    llm_chain = LLMChain(prompt=prompt, llm=llm)
 
-print("////////////////////////////////////")
-print("llm_chain_run(question)")
-output= llm_chain.run(question)
-print(output)
-print("////////////////////////////////////")
+    # question = "Please reduce the area of the pillow located on the far right and move it to the left side of the sofa."
+    # question = "Please reduce the area of the pillow located at the far right and move it onto the table in front of the sofa."
+    # question = "Make the tv much bigger."
 
-# '\nAnswer:' 부분 제거
-output_string = output.split(': ')[1] # 해당 값 grounding dino로 보내기 
+    print("\n\n\n////////////////////////////////////")
+    print("llm_chain_run(question)")
+    output= llm_chain.run(question)
+    print(output)
 
-# 결과 출력
-print("-----------output_string-----------")
-print(output_string)
+    # '\nAnswer:' 부분 제거
+    output_string = output.split(': ')[1] # 해당 값 grounding dino로 보내기 
 
-lang_classes = output_string.split(", ")
+    # 결과 출력
+    print("-----------output_string-----------")
+    print(output_string)
 
-def gpt_grounded_sam(image_nname, mode):
+    lang_classes = output_string.split(", ")
+
     IMAGE_NAME = image_nname
     print("IMAGE_NAME")
     print(IMAGE_NAME)
@@ -110,7 +110,7 @@ def gpt_grounded_sam(image_nname, mode):
     # print(image_classes)
     # SOURCE_IMAGE_PATH = image_paths[CURRENT_IMG_NUM]
 
-    OUTPUT_DIR = f"./outputs_grounded_sam/{IMAGE_NAME}"
+    OUTPUT_DIR = f"./outputs_grounded_sam/EX_{ex_num}/{IMAGE_NAME}"
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     SOURCE_IMAGE_PATH = os.path.join(IMAGE_DIR, IMAGE_NAME)
@@ -143,10 +143,9 @@ def gpt_grounded_sam(image_nname, mode):
         text_threshold=BOX_THRESHOLD
     )
 
-    print("////////////////////////////////////")
-    print("detections")
+    print("\n\n\n////////////////////////////////////")
+    print("GroundingDINO outputs")
     print(detections) # detections = xyxy, mask, confidence, class_id, tracker_id
-    print("////////////////////////////////////\n\n\n")
     # Detections(xyxy=array([[204.80188 , 146.85254 , 298.17764 , 223.25366 ],ㅇ
     #        [388.03534 , 290.52283 , 432.3512  , 323.94464 ],
     #        [ 78.035995, 299.67517 , 127.26997 , 321.89618 ]], dtype=float32), mask=None, confidence=array([0.8248828 , 0.5592095 , 0.50679314], dtype=float32), class_id=array([0, 1, 1]), tracker_id=None)
@@ -220,12 +219,12 @@ def gpt_grounded_sam(image_nname, mode):
     masks = masks * 256
 
     # mask  자체가 ndarray의 형태로 출력됨. 
-    print("////////////////////////////////////")
-    print("masks")
-    # print(masks)
-    print(type(masks)) # <class 'numpy.ndarray'>
-    print(masks.shape) # (3, 512, 512)
-    print("/////////////////////////////////////\n\n\n")
+    # print("////////////////////////////////////")
+    # print("masks")
+    # # print(masks)
+    # print(type(masks)) # <class 'numpy.ndarray'>
+    # print(masks.shape) # (3, 512, 512)
+    # print("/////////////////////////////////////\n\n\n")
 
     #detections.mask 에 다시 변형된 mask를 저장
     # detections.mask = masks
@@ -297,7 +296,7 @@ def gpt_grounded_sam(image_nname, mode):
         cropped_mask = mask[y_min:y_max, x_min:x_max]
         return cropped_image, cropped_mask
 
-
+    cls_bbox = {}
     square_masks = []
     anti_masks = []
     contour_masks = []
@@ -315,6 +314,8 @@ def gpt_grounded_sam(image_nname, mode):
         class_name = CLASSES[detections.class_id[i]].lower()
         bbox = detections.xyxy[i]
 
+        cls_bbox[f'{class_name}_{i}'] = bbox
+
         x_min, y_min, x_max, y_max = bbox
         line = f"{class_name}_{i}" + " [" + str(x_min) + " " + str(y_min) + " " + str(x_max) + " " + str(y_max) + ']'
         lang_chain_input.append(line)
@@ -325,6 +326,7 @@ def gpt_grounded_sam(image_nname, mode):
 
         square_mask = create_mask_with_bounding_box(bbox)
         square_masks.append(square_mask)
+
         cv2.imwrite(os.path.join(OUTPUT_DIR, f"{class_name}_{i}", "square_mask.jpg"), square_mask)
 
         anti_mask = create_antiMask_with_originalMask(mask)
@@ -422,7 +424,7 @@ def gpt_grounded_sam(image_nname, mode):
     chain = chat_prompt | ChatOpenAI(openai_api_key = OPEN_AI_API_KEY, temperature=1) | CommaSeparatedListOutputParser()
     output= chain.invoke({"instruction": question, "bounding_box_coordinates": ','.join(lang_chain_input)})
 
-    print("---------gpt_raw_output---------")
+    print("\n\n\n---------gpt_raw_output---------")
     print(output)
 
     formatted_text_string = " ".join(output)
@@ -444,12 +446,20 @@ def gpt_grounded_sam(image_nname, mode):
     # result = [{'target': targets[0], 'nbox': nbox_list[0]},
     #         {'target': targets[1], 'nbox': nbox_list[1]}]
     
+    print("\n\n\n*************info_dict**************")
+    print(cls_bbox)
+
     result = []
     for i in range(len(targets)):
-        result.append({'i_name':IMAGE_NAME, 'target': targets[i], 'nbox': nbox_list[i], 'mode': mode})
+        result.append({
+            'i_name':IMAGE_NAME, 
+            'target': targets[i], 
+            'nbox': nbox_list[i], 
+            "original_bbox": cls_bbox[targets[i]] 
+            })
 
     # 결과 출력
-    print("----------final_result-----------")
+    print("\n\n\n----------final_result-----------")
     print(result)
 
     return result

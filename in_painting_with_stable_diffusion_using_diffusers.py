@@ -19,12 +19,62 @@ import torch
 
 import os
 import cv2
+import math
 
 import PIL
 import gradio as gr
 from diffusers import StableDiffusionInpaintPipeline
 
-def inpainting(idx, result):
+def create_mask_with_bounding_box(bbox):
+    # 이미지 크기 설정
+    image_size = (512, 512)
+
+    # 넘파이 배열 생성 (전체를 0으로 초기화)
+    image = np.zeros(image_size)
+
+    # bounding box 좌표
+    x_min, y_min, x_max, y_max = bbox
+
+    # 좌측상단 올림 우측 하단 내림.
+    x_min = math.floor(x_min)
+    y_min = math.floor(y_min)
+    x_max = math.ceil(x_max)
+    y_max = math.ceil(y_max)
+    
+    print("\n\n\n_________orginal squeare: x_min y_min x_max y_max________")
+    print(x_min, y_min, x_max, y_max)
+
+    # make mask thicker
+    if x_min > 50: 
+        x_min = x_min - 50
+    else:
+        x_min = x_min - 10
+
+    if y_min > 50: 
+        y_min = y_min - 50
+    else: 
+        y_min = y_min - 10
+
+    if x_max < (512-50): 
+        x_max = x_max + 50
+    else: 
+        x_max = x_max + 10
+
+    if y_max < (512-50): 
+        y_max = y_max + 50
+    else:
+        y_max = y_max + 10
+
+
+    print("\n\n\n_________bigger squeare: x_min y_min x_max y_max________")
+    print(x_min, y_min, x_max, y_max)
+
+    # bounding box 안의 영역을 256으로 설정
+    image[y_min:y_max, x_min:x_max] = 256
+
+    return image
+
+def inpainting(idx, result, ex_num):
 
     device = "cuda"
     model_path = "runwayml/stable-diffusion-inpainting"
@@ -62,18 +112,18 @@ def inpainting(idx, result):
     # bbox = [ 25, 200, 150, 430 ] # img_1 drawer_2 bigger -> middle success
     # bbox = [ 175.44302, 150.84218, 370.87534, 370.24518] # img_4 monitor_2 bigger -> success
 
-
-    MODE = result["mode"]
+    EX_ID = f"EX_{ex_num}"
     IMAGE_NAME = result["i_name"]
     OBJECT_NAME = result["target"]
     BBOX = result["nbox"]
+    ORIGINAL_BBOX = result["original_bbox"]
 
     IMAGE_PATH = os.path.join("./content", IMAGE_NAME)
-    SOURCE_PATH = os.path.join("./outputs_grounded_sam", IMAGE_NAME, OBJECT_NAME)
+    SOURCE_PATH = os.path.join("./outputs_grounded_sam", EX_ID, IMAGE_NAME, OBJECT_NAME)
 
     OUTPUT_BASE_DIR = f"./outputs_inpaintings"
 
-    OUTPUT_DIR=os.path.join(OUTPUT_BASE_DIR, IMAGE_NAME, OBJECT_NAME, str(idx))
+    OUTPUT_DIR=os.path.join(OUTPUT_BASE_DIR, EX_ID, IMAGE_NAME, OBJECT_NAME, str(idx))
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     from PIL import Image
@@ -83,25 +133,39 @@ def inpainting(idx, result):
     image = image.resize((512, 512))
     image.save(os.path.join(OUTPUT_DIR, "original_image.jpg"))
     
-    if MODE == 'smaller' or 'move' :
-        print("MODE= ", MODE)
-        prompt = "background"
-        guidance_scale=9
-        num_samples = 1
-        generator = torch.Generator(device="cuda").manual_seed(1) # change the seed to get different results
-        object_mask = Image.open(os.path.join(SOURCE_PATH, "mask.jpg"))
+    # prompt = "background"
+    prompt = f"remove {OBJECT_NAME.split('_')[0]} from background"
+    print('\n\n\n*******remove object inpainting prompt*******')
+    print(prompt)
+    guidance_scale=9
+    num_samples = 1
+    generator = torch.Generator(device="cuda").manual_seed(1) # change the seed to get different results
+    
+    # # 딱 맞는 object mask적용
+    # object_mask = Image.open(os.path.join(SOURCE_PATH, "mask.jpg"))
+    # object_mask = np.array(Image.open(os.path.join(SOURCE_PATH, "mask.jpg")))
+    # #object_mask array 로 변환하고 입력받기.
+    # object_mask = np.where(object_mask==256, 1, object_mask)
+    # #object_mask 다시 PIL타입으로 저장.
+    # object_mask = Image.fromarray(object_mask)
 
-        object_removed_images = pipe(
-        prompt=prompt,
-        image=image,
-        mask_image=object_mask,
-        guidance_scale=guidance_scale,
-        generator=generator,
-        num_images_per_prompt=num_samples,).images
-        
-        object_removed_image = object_removed_images[0]
-        object_removed_image.save(os.path.join(OUTPUT_DIR, "object_removed_image.jpg"))
-        image = object_removed_image
+    # 조금 큰 object mask 적용
+    object_mask = Image.fromarray(create_mask_with_bounding_box(ORIGINAL_BBOX))
+    object_mask = object_mask.convert("L")
+    object_mask.save(os.path.join(OUTPUT_DIR, "remove_object_square_mask.jpeg"))
+    # object_mask = np.where(object_mask==256, 1, object_mask)
+
+    object_removed_images = pipe(
+    prompt=prompt,
+    image=image,
+    mask_image=object_mask,
+    guidance_scale=guidance_scale,
+    generator=generator,
+    num_images_per_prompt=num_samples,).images
+    
+    object_removed_image = object_removed_images[0]
+    object_removed_image.save(os.path.join(OUTPUT_DIR, "object_removed_image.jpg"))
+    image = object_removed_image
 
 
     bbox = [int(x) for x in BBOX]
@@ -122,13 +186,14 @@ def inpainting(idx, result):
     contour_mask = Image.fromarray(templete)
 
     cropped_contour_mask = cv2.imread(os.path.join(SOURCE_PATH, "cropped_contour_mask.jpg"))
+    cropped_contour_mask = np.where(cropped_contour_mask==256, 1, cropped_contour_mask)
     pil_cropped_contour_mask = Image.fromarray(cropped_contour_mask)
     resized_ct_mask = pil_cropped_contour_mask.resize((bbox_width, bbox_height))
 
     contour_mask.paste(resized_ct_mask, bbox)
 
-    print("contour_mask")
-    print(contour_mask.size)
+    # print("contour_mask")
+    # print(contour_mask.size)
 
     prompt = "background"
 
