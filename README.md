@@ -15,15 +15,18 @@ CUDA_VISIBLE_DEVICES=0 python main.py
 
 두 가지 작성 예시
 > 0: img_0.jpeg: Make the tv much bigger.
+
 > 1: img_0.jpeg: Make the tv bigger over the drawer.
 
 
 dino, grounded_sam 결과 : outputs_grounded_sam 폴더에 저장
-  > 폴더 구성은 다음과 같음. \n
+  > 폴더 구성은 다음과 같음.
+  
   > EX_{number}/{image_name}/{object_id}/masks.... > # 여러가지 필요한 mask 저장.
 
 inpainting 결과 : outputs_inpaintings 폴더에 저장
   > 폴더 구성은 다음과 같음.
+  
   > EX_{number}/{image_name}/{object}/{action_id}/
   >  > {diffusion result # diffusion 결과 3가지 사진 },
   >  > {object_removed_image # 배경에서 물체가 지워진 사진},
