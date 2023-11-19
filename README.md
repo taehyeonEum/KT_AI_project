@@ -3,7 +3,7 @@ KT_project : Inri_AI
 실행방법: 
 <pre><code>
 CUDA_VISIBLE_DEVICES=0 python main.py
-<code><pre>
+</code></pre>
 
 실험 소스(대상이미지)는 ./content에 저장되어 있음.
 
