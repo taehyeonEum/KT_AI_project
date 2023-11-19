@@ -1,4 +1,3 @@
-import argparse
 import grounded_sam_simple_demo_2_langchain as gpt_grouded_sam
 import in_painting_with_stable_diffusion_using_diffusers as inpainting
 
@@ -25,15 +24,11 @@ if __name__=="__main__":
     lines = f.readlines()
     f.close()
     ex_num = int(lines[-1].split(": ")[0])
-    question = lines[-1].split(": ")[1]
+    image_name = lines[-1].split(": ")[1]
+    question = lines[-1].split(": ")[2]
 
-    parser = argparse.ArgumentParser()
 
-    parser.add_argument("--image_name", type=str)
-
-    args = parser.parse_args()
-
-    main(args.image_name, ex_num, question)
+    main(image_name, ex_num, question)
 
     # # 다음 실험 번호 자동 추가
     # f=open("./ex_number_question.txt", 'a')
