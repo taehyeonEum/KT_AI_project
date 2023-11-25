@@ -1,5 +1,6 @@
 import grounded_sam_simple_demo_2_langchain as gpt_grouded_sam
 import in_painting_with_stable_diffusion_using_diffusers as inpainting
+from InpaintAnything import remove_anything as remove_anything
 
 
 def main(image_name, ex_num, question):

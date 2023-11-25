@@ -1,0 +1,97 @@
+ex_num: 40_image_name: img_6.jpeg_question: Increase the size of the bottom tomato.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 41_image_name: img_6.jpeg_question: Decrease the size of the bottom tomato.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 42_image_name: img_6.jpeg_question: Move the bottom tomato to the left.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 43_image_name: img_6.jpeg_question: Move the bottom tomato to the right.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 44_image_name: img_6.jpeg_question: Move the bottom tomato upward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 45_image_name: img_6.jpeg_question: Move the bottom tomato downward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 46_image_name: img_6.jpeg_question: Move the bottom tomato diagonally to the left.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 47_image_name: img_6.jpeg_question: Move the bottom tomato diagonally to the right.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 48_image_name: img_6.jpeg_question: Move the bottom tomato diagonally upward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 49_image_name: img_6.jpeg_question: Move the bottom tomato diagonally downward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 50_image_name: img_6.jpeg_question: Place the bottom tomato on top of the spoon.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 51_image_name: img_6.jpeg_question: Enlarge the size of the tomato by 3 times.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 52_image_name: img_6.jpeg_question: Move the tomato diagonally down and to the left by 20px.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 56_image_name: img_7.jpeg_question: Move the tree to the right.
+_error: images do not match
+ex_num: 57_image_name: img_7.jpeg_question: Move the tree upward.
+_error: list index out of range
+ex_num: 58_image_name: img_7.jpeg_question: Move the tree downward.
+_error: images do not match
+ex_num: 60_image_name: img_7.jpeg_question: Move the tree diagonally to the right.
+_error: list index out of range
+ex_num: 40_image_name: img_6.jpeg_question: Increase the size of the red ball.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 41_image_name: img_6.jpeg_question: Decrease the size of the red ball.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 42_image_name: img_6.jpeg_question: Move the red ball to the left.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 43_image_name: img_6.jpeg_question: Move the red ball to the right.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 40_image_name: img_6.jpeg_question: Increase the size of the red ball.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 41_image_name: img_6.jpeg_question: Decrease the size of the red ball.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 42_image_name: img_6.jpeg_question: Move the red ball to the left.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 43_image_name: img_6.jpeg_question: Move the red ball to the right.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 44_image_name: img_6.jpeg_question: Move the red ball upward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 45_image_name: img_6.jpeg_question: Move the red ball downward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 46_image_name: img_6.jpeg_question: Move the red ball diagonally to the left.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 47_image_name: img_6.jpeg_question: Move the red ball diagonally to the right.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 48_image_name: img_6.jpeg_question: Move the red ball diagonally upward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 49_image_name: img_6.jpeg_question: Move the red ball diagonally downward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 50_image_name: img_6.jpeg_question: Place the red ball on top of the spoon.
+_error: images do not match
+ex_num: 51_image_name: img_6.jpeg_question: Enlarge the size of the red ball by 3 times.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 52_image_name: img_6.jpeg_question: Move the red ball diagonally down and to the left by 20px.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+

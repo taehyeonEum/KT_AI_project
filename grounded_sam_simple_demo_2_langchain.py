@@ -35,12 +35,12 @@ from segment_anything import sam_model_registry, SamPredictor
 def gpt_grounded_sam(image_nname, ex_num, question):
 
     template = """
-    Extract only objects names.
+    Extract only objects names. 
+    Do not include 'answer,' just extract the object names.
 
     Question: {question} 
-
     """
-    OPEN_AI_API_KEY =  "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"
+    OPEN_AI_API_KEY =  "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"
 
     prompt = PromptTemplate(template=template, input_variables=["question"])
     llm = OpenAI(model_name="text-davinci-003",openai_api_key=OPEN_AI_API_KEY)
@@ -52,17 +52,20 @@ def gpt_grounded_sam(image_nname, ex_num, question):
 
     print("\n\n\n////////////////////////////////////")
     print("llm_chain_run(question)")
-    output= llm_chain.run(question)
-    print(output)
-
-    # '\nAnswer:' 부분 제거
-    output_string = output.split(': ')[1] # 해당 값 grounding dino로 보내기 
-
-    # 결과 출력
-    print("-----------output_string-----------")
+    output_string= llm_chain.run(question)
+    print("-------raw GPT output----------")
     print(output_string)
 
+    # '\nAnswer:' 부분 제거
+    # output_string = output.split(': ')[1] # 해당 값 grounding dino로 보내기 
+
+    # 결과 출력
+    
     lang_classes = output_string.split(", ")
+    for i, clas in enumerate(lang_classes):
+        lang_classes[i] = clas.replace(" ", "").replace("\n","").lower()
+    print("------regularized classes names------")
+    print(lang_classes)
 
     IMAGE_NAME = image_nname
     print("IMAGE_NAME")
@@ -110,7 +113,7 @@ def gpt_grounded_sam(image_nname, ex_num, question):
     # print(image_classes)
     # SOURCE_IMAGE_PATH = image_paths[CURRENT_IMG_NUM]
 
-    OUTPUT_DIR = f"./outputs_grounded_sam/EX_{ex_num}/{IMAGE_NAME}"
+    OUTPUT_DIR = f"./outputs_grounded_sam_series/EX_{ex_num}/{IMAGE_NAME}"
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     SOURCE_IMAGE_PATH = os.path.join(IMAGE_DIR, IMAGE_NAME)
@@ -130,7 +133,7 @@ def gpt_grounded_sam(image_nname, ex_num, question):
     # print("type(PIL image)")
     # print(type(image)) # <class 'PIL.JpegImagePlugin.JpegImageFile'>
     image = np.array(image.resize((512, 512)))
-    # print("image.shape after resize and np.array")
+    # print("shape after resize and np.array")
     # print(type(image)) # <class 'numpy.ndarray'>
     # print(image.shape) # (512, 512, 3)
 
@@ -437,11 +440,15 @@ def gpt_grounded_sam(image_nname, ex_num, question):
 
     # 정규 표현식을 사용하여 target 값과 nbox 값 추출
     targets = re.findall(r"'target': '(.*?)'", input_string)
+    for i, target in enumerate(targets): 
+        targets[i] = str(target).lower()
+    print("targets")
+    print(targets)
     nbox_values = re.findall(r"\(([\d.]+ [\d.]+ [\d.]+ [\d.]+)\)", input_string)
 
     # nbox 값을 실수로 변환하고 리스트로 구성
     nbox_list = [[float(coord) for coord in box.split()] for box in nbox_values]
-
+    print(nbox_list)
     # 결과 딕셔너리 생성
     # result = [{'target': targets[0], 'nbox': nbox_list[0]},
     #         {'target': targets[1], 'nbox': nbox_list[1]}]
@@ -450,10 +457,13 @@ def gpt_grounded_sam(image_nname, ex_num, question):
     print(cls_bbox)
 
     result = []
+    print("len(targets)")
+    print(len(targets))
     for i in range(len(targets)):
         result.append({
             'i_name':IMAGE_NAME, 
-            'target': targets[i], 
+            'target': targets[i],
+            'question': question, 
             'nbox': nbox_list[i], 
             "original_bbox": cls_bbox[targets[i]] 
             })
@@ -461,6 +471,12 @@ def gpt_grounded_sam(image_nname, ex_num, question):
     # 결과 출력
     print("\n\n\n----------final_result-----------")
     print(result)
+
+    f=open("./txt_s/results_2.txt", 'a')
+    f.write(str(ex_num)+"\n")
+    for r in result:
+        f.write(f"   {str(r)}\n")
+    f.close()
 
     return result
 

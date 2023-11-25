@@ -10,6 +10,7 @@
 # from huggingface_hub import notebook_login
 
 # notebook_login()
+from PIL import Image
 import argparse
 import inspect
 from typing import List, Optional, Union
@@ -24,13 +25,16 @@ import math
 import PIL
 import gradio as gr
 from diffusers import StableDiffusionInpaintPipeline
+from InpaintAnything import remove_anything
 
-def create_mask_with_bounding_box(bbox):
+
+def make_rectangle_d_mask(bbox):
     # 이미지 크기 설정
     image_size = (512, 512)
 
     # 넘파이 배열 생성 (전체를 0으로 초기화)
     image = np.zeros(image_size)
+    image_b = np.zeros(image_size)
 
     # bounding box 좌표
     x_min, y_min, x_max, y_max = bbox
@@ -40,41 +44,48 @@ def create_mask_with_bounding_box(bbox):
     y_min = math.floor(y_min)
     x_max = math.ceil(x_max)
     y_max = math.ceil(y_max)
+
+    image[y_min:y_max, x_min:x_max] = 256
+
     
-    print("\n\n\n_________orginal squeare: x_min y_min x_max y_max________")
+    print("_________orginal squeare: x_min y_min x_max y_max________")
     print(x_min, y_min, x_max, y_max)
 
     # make mask thicker
-    if x_min > 50: 
-        x_min = x_min - 50
+    if x_min > 15: 
+        x_min = x_min - 15
     else:
         x_min = x_min - 10
 
-    if y_min > 50: 
-        y_min = y_min - 50
+    if y_min > 15: 
+        y_min = y_min - 15
     else: 
         y_min = y_min - 10
 
-    if x_max < (512-50): 
-        x_max = x_max + 50
+    if x_max < (512-15): 
+        x_max = x_max + 15
     else: 
         x_max = x_max + 10
 
-    if y_max < (512-50): 
-        y_max = y_max + 50
+    if y_max < (512-15): 
+        y_max = y_max + 15
     else:
         y_max = y_max + 10
 
 
-    print("\n\n\n_________bigger squeare: x_min y_min x_max y_max________")
+    print("_________bigger squeare: x_min y_min x_max y_max________")
     print(x_min, y_min, x_max, y_max)
 
     # bounding box 안의 영역을 256으로 설정
-    image[y_min:y_max, x_min:x_max] = 256
+    image_b[y_min:y_max, x_min:x_max] = 256
+    image_d = image_b-image
+    image_d = image_d[y_min:y_max, x_min:x_max]
+    image_d = Image.fromarray(image_d)
 
-    return image
+    return image_d, [x_min, y_min, x_max, y_max]
 
 def inpainting(idx, result, ex_num):
+
 
     device = "cuda"
     model_path = "runwayml/stable-diffusion-inpainting"
@@ -119,53 +130,80 @@ def inpainting(idx, result, ex_num):
     ORIGINAL_BBOX = result["original_bbox"]
 
     IMAGE_PATH = os.path.join("./content", IMAGE_NAME)
-    SOURCE_PATH = os.path.join("./outputs_grounded_sam", EX_ID, IMAGE_NAME, OBJECT_NAME)
+    SOURCE_PATH = os.path.join("./outputs_grounded_sam_series", EX_ID, IMAGE_NAME, OBJECT_NAME)
 
-    OUTPUT_BASE_DIR = f"./outputs_inpaintings"
+    OUTPUT_BASE_DIR = f"./outputs_inpaintings_series"
 
     OUTPUT_DIR=os.path.join(OUTPUT_BASE_DIR, EX_ID, IMAGE_NAME, OBJECT_NAME, str(idx))
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-    from PIL import Image
+    OUTPUT_MASK_DIR = os.path.join(OUTPUT_DIR, "masks")
+    os.makedirs(OUTPUT_MASK_DIR, exist_ok=True)
 
 
     image = Image.open(IMAGE_PATH)
     image = image.resize((512, 512))
-    image.save(os.path.join(OUTPUT_DIR, "original_image.jpg"))
-    
-    # prompt = "background"
-    prompt = f"remove {OBJECT_NAME.split('_')[0]} from background"
-    print('\n\n\n*******remove object inpainting prompt*******')
-    print(prompt)
-    guidance_scale=9
-    num_samples = 1
-    generator = torch.Generator(device="cuda").manual_seed(1) # change the seed to get different results
-    
-    # # 딱 맞는 object mask적용
-    # object_mask = Image.open(os.path.join(SOURCE_PATH, "mask.jpg"))
-    # object_mask = np.array(Image.open(os.path.join(SOURCE_PATH, "mask.jpg")))
-    # #object_mask array 로 변환하고 입력받기.
-    # object_mask = np.where(object_mask==256, 1, object_mask)
-    # #object_mask 다시 PIL타입으로 저장.
-    # object_mask = Image.fromarray(object_mask)
+    IMAGE_PATH_512 = os.path.join(OUTPUT_DIR, "original_image.jpg")
+    image.save(IMAGE_PATH_512)
 
-    # 조금 큰 object mask 적용
-    object_mask = Image.fromarray(create_mask_with_bounding_box(ORIGINAL_BBOX))
-    object_mask = object_mask.convert("L")
-    object_mask.save(os.path.join(OUTPUT_DIR, "remove_object_square_mask.jpeg"))
-    # object_mask = np.where(object_mask==256, 1, object_mask)
-
-    object_removed_images = pipe(
-    prompt=prompt,
-    image=image,
-    mask_image=object_mask,
-    guidance_scale=guidance_scale,
-    generator=generator,
-    num_images_per_prompt=num_samples,).images
+    x_min, y_min, x_max, y_max = ORIGINAL_BBOX
+    mean_x = (x_min+x_max) / 2
+    mean_y = (y_min+y_max) / 2
     
-    object_removed_image = object_removed_images[0]
-    object_removed_image.save(os.path.join(OUTPUT_DIR, "object_removed_image.jpg"))
-    image = object_removed_image
+    remove_anything.remove_anything(IMAGE_PATH_512 , "key_in" , [mean_x, mean_y] , [1], 15 , OUTPUT_DIR 
+                    , "vit_h" 
+                    , "./checkpoints/sam_vit_h_4b8939.pth" 
+                    , "./lama/configs/prediction/default.yaml"
+                    , "./InpaintAnything/pretrained_models/big-lama", result )
+
+    # code for remove object with origianl code..!! -> replaced by inpaint anything. 
+    # # prompt = "wall"
+    # # prompt = f"remove {OBJECT_NAME.split('_')[0]} from background"
+    # # prompt = f"Remove {OBJECT_NAME.split('_')[0]} from the background and keep it clean without leaving any other objects in the background."
+    # # prompt = ""
+    # # prompt = "room with nothing"
+    # # prompt = "background with nothing else"
+    # prompt = "Remove background and objects naturally" # EX_10
+    # prompt = "Remove objects naturally" # EX_11
+    # prompt = "Remove objects naturally and fill blank naturally" # EX_12
+    # print('\n\n\n*******remove object inpainting prompt*******')
+    # print(prompt)
+    # guidance_scale=9
+    # num_samples = 1
+    # generator = torch.Generator(device="cuda").manual_seed(23) # change the seed to get different results
+    
+    # # # 딱 맞는 object mask적용
+    # # object_mask = Image.open(os.path.join(SOURCE_PATH, "mask.jpg"))
+    # # object_mask = np.array(Image.open(os.path.join(SOURCE_PATH, "mask.jpg")))
+    # # #object_mask array 로 변환하고 입력받기.
+    # # object_mask = np.where(object_mask==256, 1, object_mask)
+    # # #object_mask 다시 PIL타입으로 저장.
+    # # object_mask = Image.fromarray(object_mask)
+
+    # # 조금 큰 object mask 적용
+    # object_mask = Image.fromarray(create_mask_with_bounding_box(ORIGINAL_BBOX))
+    # object_mask = object_mask.convert("L")
+    # object_mask.save(os.path.join(OUTPUT_DIR, "remove_object_square_mask.jpeg"))
+    # # object_mask = np.where(object_mask==256, 1, object_mask)
+
+    # object_removed_images = pipe(
+    # prompt=prompt,
+    # image=image,
+    # mask_image=object_mask,
+    # guidance_scale=guidance_scale,
+    # generator=generator,
+    # num_images_per_prompt=num_samples,).images
+    
+    # object_removed_image = object_removed_images[0]
+    # object_removed_image.save(os.path.join(OUTPUT_DIR, "object_removed_image.jpg"))
+    # image = object_removed_image
+
+
+    ia_images = []
+    image_paths = []
+    for i in range(3):
+        path = f"{OUTPUT_DIR}/original_image/inpainted_with_mask_{i}.png"
+        image_paths.append(path)
+        ia_images.append(Image.open(path))
 
 
     bbox = [int(x) for x in BBOX]
@@ -178,48 +216,68 @@ def inpainting(idx, result, ex_num):
     bbox_height = y2 - y1
     # 바운딩 박스 크기로 새 이미지 조정
     new_image = new_image.resize((bbox_width, bbox_height))
-    pasted_image = image
-    pasted_image.paste(new_image, bbox)
-    pasted_image.save(os.path.join(OUTPUT_DIR, "pasted_image.jpg"))
 
-    templete = np.zeros((512, 512))
-    contour_mask = Image.fromarray(templete)
+    for bi, image in enumerate(ia_images):
+        pasted_image = image
+        pasted_image.paste(new_image, bbox)
+        pasted_image.save(os.path.join(OUTPUT_DIR, "pasted_image.jpg"))
 
-    cropped_contour_mask = cv2.imread(os.path.join(SOURCE_PATH, "cropped_contour_mask.jpg"))
-    cropped_contour_mask = np.where(cropped_contour_mask==256, 1, cropped_contour_mask)
-    pil_cropped_contour_mask = Image.fromarray(cropped_contour_mask)
-    resized_ct_mask = pil_cropped_contour_mask.resize((bbox_width, bbox_height))
+        templete = np.zeros((512, 512))
+        contour_mask = Image.fromarray(templete)
 
-    contour_mask.paste(resized_ct_mask, bbox)
+        cropped_contour_mask = cv2.imread(os.path.join(SOURCE_PATH, "cropped_contour_mask.jpg"))
+        cropped_contour_mask = np.where(cropped_contour_mask==256, 1, cropped_contour_mask)
+        pil_cropped_contour_mask = Image.fromarray(cropped_contour_mask)
+        resized_ct_mask = pil_cropped_contour_mask.resize((bbox_width, bbox_height))
 
-    # print("contour_mask")
-    # print(contour_mask.size)
+        #얇은 사각형 도넛 모양의 마스크를 생성함 , 저장함. 
+        mask_d, nbbox = make_rectangle_d_mask(BBOX)
+        mask_d=mask_d.convert("L")
+        mask_d.save(os.path.join(OUTPUT_MASK_DIR, "mask_D.jpeg"))
 
-    prompt = "background"
+        #반전 마스크를 구성함.
+        contour_mask.paste(resized_ct_mask, bbox)
+        contour_mask = contour_mask.convert("L")
+        contour_mask.save(os.path.join(OUTPUT_MASK_DIR, "contour_mask.jpeg"))
 
-    guidance_scale=9
-    num_samples = 3
-    generator = torch.Generator(device="cuda").manual_seed(1) # change the seed to get different results
+        #반전 마스크에 얇은 사각형 도넛 모양의 마스크를 붙임.
+        contour_mask.paste(mask_d, nbbox)
+        contour_mask.save(os.path.join(OUTPUT_MASK_DIR, "thick_contour_mask.jpeg"))
 
-    images = pipe(
-        prompt=prompt,
-        image=pasted_image,
-        mask_image=contour_mask,
-        guidance_scale=guidance_scale,
-        generator=generator,
-        num_images_per_prompt=num_samples,
-    ).images
+        # 최종 반전 마스크를 구성함.
+        contour_mask.paste(resized_ct_mask, bbox)
+        contour_mask.save(os.path.join(OUTPUT_MASK_DIR, "final_contour_mask.jpeg"))
 
-    for i, img in enumerate(images):
-        # img = np.array(img)
-        # print("type(img)")
-        # print(type(img))
-        # print("img.shape")
-        # print(img.shape)
-        # print("img.max() img.min()")
-        # print(img.max(), img.min())
-        # cv2.imwrite(os.path.join(OUTPUT_DIR, f"diff_result_{i}.jpg"), img)
-        img.save(os.path.join(OUTPUT_DIR, f"diff_result_{i}.jpg"))
+
+
+        # print("contour_mask")
+        # print(contour_mask.size)
+
+        prompt = "background"
+
+        guidance_scale=9
+        num_samples = 3
+        generator = torch.Generator(device="cuda").manual_seed(1) # change the seed to get different results
+
+        images = pipe(
+            prompt=prompt,
+            image=pasted_image,
+            mask_image=contour_mask,
+            guidance_scale=guidance_scale,
+            generator=generator,
+            num_images_per_prompt=num_samples,
+        ).images
+
+        for i, img in enumerate(images):
+            # img = np.array(img)
+            # print("type(img)")
+            # print(type(img))
+            # print("img.shape")
+            # print(img.shape)
+            # print("img.max() img.min()")
+            # print(img.max(), img.min())
+            # cv2.imwrite(os.path.join(OUTPUT_DIR, f"diff_result_{i}.jpg"), img)
+            img.save(os.path.join(OUTPUT_DIR, f"diff_result_{bi}_{i}.jpg"))
 
 
 

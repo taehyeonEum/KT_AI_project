@@ -1,0 +1,92 @@
+ex_num: 1_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: 'tv'
+ex_num: 6_image_name: img_0.jpeg_question: Move the left frame downward.
+_error: list index out of range
+ex_num: 7_image_name: img_0.jpeg_question: Move the left frame diagonally to the left.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 11_image_name: img_0.jpeg_question: Place the red pillow on the leftmost sofa.
+_error: 'red pillow'
+ex_num: 21_image_name: img_1.jpeg_question: Move the frame diagonally to the right.
+_error: tile cannot extend outside image
+ex_num: 24_image_name: img_1.jpeg_question: Place the books on the chest of drawers onto the bed.
+_error: list index out of range
+ex_num: 25_image_name: img_1.jpeg_question: Enlarge the size of the chest of drawers by 1.5 times.
+_error: images do not match
+ex_num: 29_image_name: img_4.jpeg_question: Move the lamp upward.
+_error: tile cannot extend outside image
+ex_num: 40_image_name: img_6.jpeg_question: Increase the size of the bottom tomato.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 41_image_name: img_6.jpeg_question: Decrease the size of the bottom tomato.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 42_image_name: img_6.jpeg_question: Move the bottom tomato to the left.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 43_image_name: img_6.jpeg_question: Move the bottom tomato to the right.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 44_image_name: img_6.jpeg_question: Move the bottom tomato upward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 45_image_name: img_6.jpeg_question: Move the bottom tomato downward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 46_image_name: img_6.jpeg_question: Move the bottom tomato diagonally to the left.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 47_image_name: img_6.jpeg_question: Move the bottom tomato diagonally to the right.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 48_image_name: img_6.jpeg_question: Move the bottom tomato diagonally upward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 49_image_name: img_6.jpeg_question: Move the bottom tomato diagonally downward.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 50_image_name: img_6.jpeg_question: Place the bottom tomato on top of the spoon.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 51_image_name: img_6.jpeg_question: Enlarge the size of the tomato by 3 times.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 52_image_name: img_6.jpeg_question: Move the tomato diagonally down and to the left by 20px.
+_error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+ex_num: 53_image_name: img_7.jpeg_question: Increase the size of the tree.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 54_image_name: img_7.jpeg_question: Decrease the size of the tree.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 55_image_name: img_7.jpeg_question: Move the tree to the left.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 56_image_name: img_7.jpeg_question: Move the tree to the right.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 57_image_name: img_7.jpeg_question: Move the tree upward.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 58_image_name: img_7.jpeg_question: Move the tree downward.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 59_image_name: img_7.jpeg_question: Move the tree diagonally to the left.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 60_image_name: img_7.jpeg_question: Move the tree diagonally to the right.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 61_image_name: img_7.jpeg_question: Move the tree diagonally upward.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 62_image_name: img_7.jpeg_question: Move the tree diagonally downward.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 63_image_name: img_7.jpeg_question: Move the tree to the right by 20px.
+_error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 64_image_name: img_7.jpeg_question: Reduce the size of the tree by 30%._error: could not broadcast input array from shape (3,) into shape (512,512,4)
+ex_num: 1
+_image_name: img_0.jpeg_question: Increase the size of the TV._error: 'tv_0'
+ex_num: 7_image_name: img_0.jpeg_question: Move the left frame diagonally to the left._error: 'left frame'
+ex_num: 11_image_name: img_0.jpeg_question: Place the red pillow on the leftmost sofa._error: 'red pillow'
+ex_num: 7_image_name: img_0.jpeg_question: Move the left_frame diagonally to the left._error: '_l_e_f_t___f_r_a_m_e___0_'
+ex_num: 11_image_name: img_0.jpeg_question: Place the red pillow on the leftmost sofa._error: '_r_e_d_ _p_i_l_l_o_w_'
+ex_num: 21_image_name: img_1.jpeg_question: Move the frame diagonally to the right._error: '_f_r_a_m_e___0_'
+ex_num: 11_image_name: img_0.jpeg_question: Place the red pillow on the leftmost sofa._error: 'red pillow'
+ex_num: 11_image_name: img_0.jpeg_question: Place the red pillow on the leftmost sofa._error: 'red pillow'
+ex_num: 11_image_name: img_0.jpeg_question: Place the red pillow on the leftmost sofa._error: 'red pillow'
+ex_num: 11_image_name: img_0.jpeg_question: Place the red pillow on the leftmost sofa._error: 'red pillow'
+ex_num: 11_image_name: img_0.jpeg_question: Place the red_pillow on the leftmost sofa._error: tile cannot extend outside image
+ex_num: 57_image_name: img_7.jpeg_question: Move the tree upward._error: tile cannot extend outside image

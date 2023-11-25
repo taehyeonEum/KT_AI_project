@@ -3,3 +3,19 @@
 2: img_0.jpeg: Make the tv bigger and locate over the drawer.
 3: img_0.jpeg: Make the tv bigger and locate above the drawer.
 4: img_0.jpeg: Make the tv bigger and locate above the drawer.
+5: img_0.jpeg: Make the tv bigger and locate above the drawer.
+6: img_0.jpeg: Make the tv bigger and locate above the drawer.
+7: img_0.jpeg: Make the tv bigger and locate above the drawer.
+8: img_0.jpeg: Make the tv bigger and locate above the drawer.
+9: img_0.jpeg: Make the tv bigger and locate above the drawer.
+10: img_0.jpeg: Make the tv bigger and locate above the drawer.
+11: img_0.jpeg: Make the tv bigger and locate above the drawer.
+12: img_0.jpeg: Make the tv bigger and locate above the drawer. # 이 지점부터 inpaint_anything 적용!
+13: img_4.jpeg: Make monitor bigger.
+14: img_4.jpeg: Make monitor bigger.
+15: img_1.jpeg: Make drawer bigger.
+16: img_1.jpeg: Make drawer bigger.
+17: img_1.jpeg: Make drawer bigger. # 두꺼운 마스크 적용
+18: img_1.jpeg: Make drawer bigger.
+19: img_3.jpeg: Move picture right side
+20: img_2.jpeg: Make plant pot smaller
