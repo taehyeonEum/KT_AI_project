@@ -1,0 +1,26 @@
+img_0.jpeg: Increase the size of the TV.
+img_0.jpeg: Make TV bigger.
+img_0.jpeg: Make Huge TV.
+img_0.jpeg: Decrease the size of the TV.
+img_0.jpeg: Make TV smaller.
+img_0.jpeg: Make small TV.
+img_0.jpeg: Move the tv to the left.
+img_0.jpeg: Move the tv to the left side.
+img_0.jpeg: Move the tv to the left side of image.
+img_0.jpeg: Move the tv to the right.
+img_0.jpeg: Move the tv to the right side.
+img_0.jpeg: Move the tv to the right side of image.
+img_0.jpeg: Move the tv upward.
+img_0.jpeg: Move the tv upside.
+img_0.jpeg: Move the tv up
+img_0.jpeg: Move the tv downward.
+img_0.jpeg: Move the tv downside.
+img_0.jpeg: Move the tv down.
+img_0.jpeg: Move the tv diagonally down to the left.
+img_0.jpeg: Move the tv diagonally left to the down.
+img_0.jpeg: Move the tv diagonally up to the right.
+img_0.jpeg: Move the tv diagonally right to the up.
+img_0.jpeg: Move the tv diagonally up to the left.
+img_0.jpeg: Move the tv diagonally left to the up.
+img_0.jpeg: Move the tv diagonally down to the left.
+img_0.jpeg: Move the tv diagonally left to the down.

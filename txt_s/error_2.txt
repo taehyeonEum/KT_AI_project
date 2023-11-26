@@ -95,3 +95,471 @@ _error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215
 ex_num: 52_image_name: img_6.jpeg_question: Move the red ball diagonally down and to the left by 20px.
 _error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
 
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally up to the right.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: Incorrect API key provided: sk-BdX2C***************************************KqiB. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: 'tv'
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: 'tv'
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: 'tv'
+ex_num: 0_image_name: img_0.jpeg_question: Make TV bigger.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Make Huge TV.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Make Huge TV.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Make Huge TV.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: 'tv'
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Make TV bigger.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: 'tv'
+ex_num: 0_image_name: img_0.jpeg_question: Make TV smaller.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Make TV smaller.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Make small TV.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Make small TV.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left side.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the left side of image.
+_error: 'tv-leftside-image_0'
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right.
+_error: 'tv_0'
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right side.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right side of image.
+_error: 'tv-rightside-image_0'
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right side of image.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv to the right side of image.
+_error: 'tv'
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upward.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upside.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv upside.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv downward.
+_error: 'tv'
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv down.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: 'tv'
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally down to the left.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally left to the down.
+_error: 'tv'
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally left to the down.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally right to the up.
+_error: list index out of range
+ex_num: 0_image_name: img_0.jpeg_question: Move the tv diagonally left to the up.
+_error: list index out of range
