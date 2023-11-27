@@ -1,40 +1,40 @@
 img_0.jpeg: Increase the size of the TV.
 img_0.jpeg: Decrease the size of the TV.
-img_0.jpeg: Move the left frame to the left.
-img_0.jpeg: Move the left frame to the right.
-img_0.jpeg: Move the left frame upward.
+img_0.jpeg: Move the left frame to the left.: 3
+img_0.jpeg: Move the left frame to the right.: 4
+img_0.jpeg: Move the left frame upward.: 5
 img_0.jpeg: Move the left frame downward.
-img_0.jpeg: Move the left_frame diagonally to the left.
-img_0.jpeg: Move the left frame diagonally to the right.
-img_0.jpeg: Move the left frame diagonally upward.
-img_0.jpeg: Move the left frame diagonally downward.
-img_0.jpeg: Place the red_pillow on the leftmost sofa.: 11
+img_0.jpeg: Move the left_frame diagonally down to the left.: 7
+img_0.jpeg: Move the left frame diagonally up to the right.: 8
+img_0.jpeg: Move the left frame diagonally up to the left.: 9
+img_0.jpeg: Move the left frame diagonally down to the right.: 10
+img_0.jpeg: Place the red pillow on the leftmost sofa.: 11
 img_0.jpeg: Move the left frame to the left by 20px.
 img_0.jpeg: Halve the size of the TV.
-img_1.jpeg: Increase the size of the chest of drawers.
-img_1.jpeg: Decrease the size of the chest of drawers.
+img_1.jpeg: Increase the size of the chest of drawers.: 14
+img_1.jpeg: Decrease the size of the chest of drawers.: 15
 img_1.jpeg: Move the frame to the left.
 img_1.jpeg: Move the frame to the right.
 img_1.jpeg: Move the frame upward.
-img_1.jpeg: Move the frame downward.
-img_1.jpeg: Move the frame diagonally to the left.
-img_1.jpeg: Move the frame diagonally to the right.
-img_1.jpeg: Move the frame diagonally upward.
-img_1.jpeg: Move the frame diagonally downward.
-img_1.jpeg: Place the books on the chest of drawers onto the bed.
+img_1.jpeg: Move the frame downward.: 19
+img_1.jpeg: Move the frame diagonally down to the left.: 19
+img_1.jpeg: Move the frame diagonally up to the right.: 21
+img_1.jpeg: Move the frame diagonally up to the left.: 22
+img_1.jpeg: Move the frame diagonally down to the right.: 23
+img_1.jpeg: Place the books on the chest of drawers onto the bed.: 24
 img_1.jpeg: Enlarge the size of the chest of drawers by 1.5 times.
 img_1.jpeg: Move the frame downward by 15px.
-img_4.jpeg: Move the lamp to the left.
-img_4.jpeg: Move the lamp to the right.
-img_4.jpeg: Move the lamp upward.
-img_4.jpeg: Move the lamp downward.
-img_4.jpeg: Move the lamp diagonally to the left.
-img_4.jpeg: Move the lamp diagonally to the right.
-img_4.jpeg: Move the lamp diagonally upward.
-img_4.jpeg: Move the lamp diagonally downward.
-img_4.jpeg: Increase the size of the mug.
-img_4.jpeg: Decrease the size of the mug.
-img_4.jpeg: Move the phone on the notebook next to the mug.
+img_4.jpeg: Move the lamp to the left.: 27
+img_4.jpeg: Move the lamp to the right.: 28
+img_4.jpeg: Move the lamp upward.: 29
+img_4.jpeg: Move the lamp downward.: 30
+img_4.jpeg: Move the lamp diagonally down to the left.: 31
+img_4.jpeg: Move the lamp diagonally up to the right.: 32
+img_4.jpeg: Move the lamp diagonally up to the left.: 33
+img_4.jpeg: Move the lamp diagonally down to the right.: 34
+img_4.jpeg: Increase the size of the mug.: 35
+img_4.jpeg: Decrease the size of the mug.: 36
+img_4.jpeg: Move the phone on the notebook next to the mug.: 37
 img_4.jpeg: Move the lamp size to the top-right by 20px diagonally.
 img_4.jpeg: Double the size of the mug.
 img_6.jpeg: Increase the size of the bottom tomato.
@@ -43,22 +43,22 @@ img_6.jpeg: Move the bottom tomato to the left.
 img_6.jpeg: Move the bottom tomato to the right.
 img_6.jpeg: Move the bottom tomato upward.
 img_6.jpeg: Move the bottom tomato downward.
-img_6.jpeg: Move the bottom tomato diagonally to the left.
-img_6.jpeg: Move the bottom tomato diagonally to the right.
-img_6.jpeg: Move the bottom tomato diagonally upward.
-img_6.jpeg: Move the bottom tomato diagonally downward.
+img_6.jpeg: Move the bottom tomato diagonally down to the left.
+img_6.jpeg: Move the bottom tomato diagonally up to the right.
+img_6.jpeg: Move the bottom tomato diagonally up to the left.
+img_6.jpeg: Move the bottom tomato diagonally down to the right.
 img_6.jpeg: Place the bottom tomato on top of the spoon.
 img_6.jpeg: Enlarge the size of the tomato by 3 times.
 img_6.jpeg: Move the tomato diagonally down and to the left by 20px.
 img_7.jpeg: Increase the size of the tree.
 img_7.jpeg: Decrease the size of the tree.
 img_7.jpeg: Move the tree to the left.
-img_7.jpeg: Move the tree to the right.
+img_7.jpeg: Move the tree to the right.: 56
 img_7.jpeg: Move the tree upward.: 57
-img_7.jpeg: Move the tree downward.
-img_7.jpeg: Move the tree diagonally to the left.
-img_7.jpeg: Move the tree diagonally to the right.
-img_7.jpeg: Move the tree diagonally upward.
-img_7.jpeg: Move the tree diagonally downward.
+img_7.jpeg: Move the tree downward.: 58
+img_7.jpeg: Move the tree diagonally down to the left.: 59
+img_7.jpeg: Move the tree diagonally up to the right.: 60
+img_7.jpeg: Move the tree diagonally up to the left.: 61
+img_7.jpeg: Move the tree diagonally down to the right.: 62
 img_7.jpeg: Move the tree to the right by 20px.
 img_7.jpeg: Reduce the size of the tree by 30%.

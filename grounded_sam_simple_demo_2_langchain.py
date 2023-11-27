@@ -40,10 +40,10 @@ def gpt_grounded_sam(image_nname, ex_num, question):
 
     Question: {question} 
     """
-    OPEN_AI_API_KEY =  "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"
+    OPEN_AI_API_KEY =  "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"
 
     prompt = PromptTemplate(template=template, input_variables=["question"])
-    llm = OpenAI(model_name="text-davinci-003",openai_api_key=OPEN_AI_API_KEY)
+    llm = OpenAI(model_name="gpt-3.5-turbo",openai_api_key=OPEN_AI_API_KEY)
     llm_chain = LLMChain(prompt=prompt, llm=llm)
 
     # question = "Please reduce the area of the pillow located on the far right and move it to the left side of the sofa."
@@ -113,7 +113,7 @@ def gpt_grounded_sam(image_nname, ex_num, question):
     # print(image_classes)
     # SOURCE_IMAGE_PATH = image_paths[CURRENT_IMG_NUM]
 
-    OUTPUT_DIR = f"./outputs_grounded_sam_series/EX_{ex_num}/{IMAGE_NAME}"
+    OUTPUT_DIR = f"./outputs_grounded_sam_suppliments/EX_{ex_num}/{IMAGE_NAME}"
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     SOURCE_IMAGE_PATH = os.path.join(IMAGE_DIR, IMAGE_NAME)

@@ -54,23 +54,23 @@ def make_rectangle_d_mask(bbox):
     # make mask thicker
     if x_min > 15: 
         x_min = x_min - 15
-    else:
-        x_min = x_min - 10
+    # else:
+    #     x_min = x_min - 10
 
     if y_min > 15: 
         y_min = y_min - 15
-    else: 
-        y_min = y_min - 10
+    # else: 
+    #     y_min = y_min - 10
 
     if x_max < (512-15): 
         x_max = x_max + 15
-    else: 
-        x_max = x_max + 10
+    # else: 
+    #     x_max = x_max + 10
 
     if y_max < (512-15): 
         y_max = y_max + 15
-    else:
-        y_max = y_max + 10
+    # else:
+    #     y_max = y_max + 10
 
 
     print("_________bigger squeare: x_min y_min x_max y_max________")
@@ -130,9 +130,9 @@ def inpainting(idx, result, ex_num):
     ORIGINAL_BBOX = result["original_bbox"]
 
     IMAGE_PATH = os.path.join("./content", IMAGE_NAME)
-    SOURCE_PATH = os.path.join("./outputs_grounded_sam_series", EX_ID, IMAGE_NAME, OBJECT_NAME)
+    SOURCE_PATH = os.path.join("./outputs_grounded_sam_suppliments", EX_ID, IMAGE_NAME, OBJECT_NAME)
 
-    OUTPUT_BASE_DIR = f"./outputs_inpaintings_series"
+    OUTPUT_BASE_DIR = f"./outputs_inpaintings_suppliments"
 
     OUTPUT_DIR=os.path.join(OUTPUT_BASE_DIR, EX_ID, IMAGE_NAME, OBJECT_NAME, str(idx))
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -278,7 +278,7 @@ def inpainting(idx, result, ex_num):
             # print(img.max(), img.min())
             # cv2.imwrite(os.path.join(OUTPUT_DIR, f"diff_result_{i}.jpg"), img)
             img.save(os.path.join(OUTPUT_DIR, f"diff_result_{bi}_{i}.jpg"))
-
+    return OUTPUT_DIR
 
 
 # insert initial image in the list so we can compare side by side
