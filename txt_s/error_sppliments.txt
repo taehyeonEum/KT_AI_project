@@ -41,3 +41,133 @@ ex_num: 24_image_name: img_1.jpeg_question: Place the books on the drawers onto 
 ex_num: 25_image_name: img_1.jpeg_question: Enlarge the size of the drawers by 1.5 times._error: Incorrect API key provided: sk-DjIeH***************************************OAoi. You can find your API key at https://platform.openai.com/account/api-keys.
 ex_num: 58_image_name: img_7.jpeg_question: Move the tree downward._error: Incorrect API key provided: sk-DjIeH***************************************OAoi. You can find your API key at https://platform.openai.com/account/api-keys.
 ex_num: 58_image_name: img_7.jpeg_question: Move the tree downward._error: images do not match
+ex_num: 1_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 2_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 3_image_name: img_0.jpeg_question: Move the left frame to the left
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 4_image_name: img_0.jpeg_question: Move the left frame to the right
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 5_image_name: img_0.jpeg_question: Move the left frame upward
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 6_image_name: img_0.jpeg_question: Move the left frame downward.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 7_image_name: img_0.jpeg_question: Move the left_frame diagonally down to the left
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 8_image_name: img_0.jpeg_question: Move the left frame diagonally up to the right
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 9_image_name: img_0.jpeg_question: Move the left frame diagonally up to the left
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 10_image_name: img_0.jpeg_question: Move the left frame diagonally down to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 11_image_name: img_0.jpeg_question: Place the red pillow on the leftmost sofa.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 12_image_name: img_0.jpeg_question: Move the left frame to the left by 20px.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 13_image_name: img_0.jpeg_question: Halve the size of the TV.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 14_image_name: img_1.jpeg_question: Increase the size of the drawers._error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 15_image_name: img_1.jpeg_question: Decrease the size of the drawers._error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 16_image_name: img_1.jpeg_question: Move the frame to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 17_image_name: img_1.jpeg_question: Move the frame to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 18_image_name: img_1.jpeg_question: Move the frame upward.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 19_image_name: img_1.jpeg_question: Move the frame downward.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 20_image_name: img_1.jpeg_question: Move the frame diagonally down to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 21_image_name: img_1.jpeg_question: Move the frame diagonally up to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 22_image_name: img_1.jpeg_question: Move the frame diagonally up to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 23_image_name: img_1.jpeg_question: Move the frame diagonally down to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 24_image_name: img_1.jpeg_question: Place the books on the drawers onto the bed._error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 25_image_name: img_1.jpeg_question: Enlarge the size of the drawers by 1.5 times._error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 26_image_name: img_1.jpeg_question: Move the frame downward by 15px.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 27_image_name: img_4.jpeg_question: Move the lamp to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 28_image_name: img_4.jpeg_question: Move the lamp to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 29_image_name: img_4.jpeg_question: Move the lamp upward.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 30_image_name: img_4.jpeg_question: Move the lamp downward.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 31_image_name: img_4.jpeg_question: Move the lamp diagonally down to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 32_image_name: img_4.jpeg_question: Move the lamp diagonally up to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 33_image_name: img_4.jpeg_question: Move the lamp diagonally up to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 34_image_name: img_4.jpeg_question: Move the lamp diagonally down to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 35_image_name: img_4.jpeg_question: Increase the size of the mug.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 36_image_name: img_4.jpeg_question: Decrease the size of the mug.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 37_image_name: img_4.jpeg_question: Move the phone on the notebook next to the mug.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 38_image_name: img_4.jpeg_question: Move the lamp size to the top-right by 20px diagonally.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 39_image_name: img_4.jpeg_question: Double the size of the mug.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 40_image_name: img_6.jpeg_question: Increase the size of the bottom tomato.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 41_image_name: img_6.jpeg_question: Decrease the size of the bottom tomato.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 42_image_name: img_6.jpeg_question: Move the bottom tomato to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 43_image_name: img_6.jpeg_question: Move the bottom tomato to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 44_image_name: img_6.jpeg_question: Move the bottom tomato upward.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 45_image_name: img_6.jpeg_question: Move the bottom tomato downward.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 46_image_name: img_6.jpeg_question: Move the bottom tomato diagonally down to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 47_image_name: img_6.jpeg_question: Move the bottom tomato diagonally up to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 48_image_name: img_6.jpeg_question: Move the bottom tomato diagonally up to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 49_image_name: img_6.jpeg_question: Move the bottom tomato diagonally down to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 50_image_name: img_6.jpeg_question: Place the bottom tomato on top of the spoon.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 51_image_name: img_6.jpeg_question: Enlarge the size of the tomato by 3 times.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 52_image_name: img_6.jpeg_question: Move the tomato diagonally down and to the left by 20px.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 53_image_name: img_7.jpeg_question: Increase the size of the tree.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 54_image_name: img_7.jpeg_question: Decrease the size of the tree.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 55_image_name: img_7.jpeg_question: Move the tree to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 56_image_name: img_7.jpeg_question: Move the tree to the right.:
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 57_image_name: img_7.jpeg_question: Move the tree upward.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 58_image_name: img_7.jpeg_question: Move the tree downward._error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 59_image_name: img_7.jpeg_question: Move the tree diagonally down to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 60_image_name: img_7.jpeg_question: Move the tree diagonally up to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 61_image_name: img_7.jpeg_question: Move the tree diagonally up to the left.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 62_image_name: img_7.jpeg_question: Move the tree diagonally down to the right.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 63_image_name: img_7.jpeg_question: Move the tree to the right by 20px.
+_error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 64_image_name: img_7.jpeg_question: Reduce the size of the tree by 30%._error: Incorrect API key provided: sk-ROWP0***************************************3sN5. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 1_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: list index out of range
+ex_num: 2_image_name: img_0.jpeg_question: Decrease the size of the TV.
+_error: 'tv'
+ex_num: 1_image_name: img_0.jpeg_question: Increase the size of the TV.
+_error: 'tv'
+ex_num: 5_image_name: img_0.jpeg_question: Move the left frame upward
+_error: 'left frame'

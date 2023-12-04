@@ -84,7 +84,7 @@ def make_rectangle_d_mask(bbox):
 
     return image_d, [x_min, y_min, x_max, y_max]
 
-def inpainting(idx, result, ex_num):
+def inpainting(idx, result, ex_num, input_dir, source_dir, output_dir):
 
 
     device = "cuda"
@@ -129,10 +129,10 @@ def inpainting(idx, result, ex_num):
     BBOX = result["nbox"]
     ORIGINAL_BBOX = result["original_bbox"]
 
-    IMAGE_PATH = os.path.join("./content", IMAGE_NAME)
-    SOURCE_PATH = os.path.join("./outputs_grounded_sam_suppliments", EX_ID, IMAGE_NAME, OBJECT_NAME)
+    IMAGE_PATH = os.path.join(input_dir, IMAGE_NAME)
+    SOURCE_PATH = os.path.join(source_dir, EX_ID, IMAGE_NAME, OBJECT_NAME)
 
-    OUTPUT_BASE_DIR = f"./outputs_inpaintings_suppliments"
+    OUTPUT_BASE_DIR = output_dir
 
     OUTPUT_DIR=os.path.join(OUTPUT_BASE_DIR, EX_ID, IMAGE_NAME, OBJECT_NAME, str(idx))
     os.makedirs(OUTPUT_DIR, exist_ok=True)

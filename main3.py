@@ -12,7 +12,7 @@ if __name__=="__main__":
     f.close()
 
     ex_num = 1
-    OUTPUT_DIR = ""
+    
 
     for line in lines:
 

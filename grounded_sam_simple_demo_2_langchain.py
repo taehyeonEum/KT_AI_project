@@ -32,7 +32,7 @@ from groundingdino.util.inference import Model
 from segment_anything import sam_model_registry, SamPredictor
 
 
-def gpt_grounded_sam(image_nname, ex_num, question):
+def gpt_grounded_sam(image_nname, ex_num, question, input_dir, output_dir, openai_api):
 
     template = """
     Extract only objects names. 
@@ -40,7 +40,7 @@ def gpt_grounded_sam(image_nname, ex_num, question):
 
     Question: {question} 
     """
-    OPEN_AI_API_KEY =  "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"
+    OPEN_AI_API_KEY =  openai_api
 
     prompt = PromptTemplate(template=template, input_variables=["question"])
     llm = OpenAI(model_name="gpt-3.5-turbo",openai_api_key=OPEN_AI_API_KEY)
@@ -90,7 +90,7 @@ def gpt_grounded_sam(image_nname, ex_num, question):
     sam.to(device=DEVICE)
     sam_predictor = SamPredictor(sam)
 
-    IMAGE_DIR = "./content"
+    IMAGE_DIR = input_dir
 
     # Predict classes and hyper-param for GroundingDINO
 
@@ -113,7 +113,7 @@ def gpt_grounded_sam(image_nname, ex_num, question):
     # print(image_classes)
     # SOURCE_IMAGE_PATH = image_paths[CURRENT_IMG_NUM]
 
-    OUTPUT_DIR = f"./outputs_grounded_sam_suppliments/EX_{ex_num}/{IMAGE_NAME}"
+    OUTPUT_DIR = f"{output_dir}/EX_{ex_num}/{IMAGE_NAME}"
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     SOURCE_IMAGE_PATH = os.path.join(IMAGE_DIR, IMAGE_NAME)
@@ -379,7 +379,7 @@ def gpt_grounded_sam(image_nname, ex_num, question):
         def parse(self, text: str):
             return text.strip().split(", ")
 
-    template = """
+    old_template = """
     Let’s imagine you’re a semantic parser. I’ll provide specific bounding box coordinates and
     instructions. These coordinates represent the [(left corner x, y values), (right corner x, y values)]
     of the bounding box. Extract the action and target from the instructions and new bounding
@@ -410,7 +410,63 @@ def gpt_grounded_sam(image_nname, ex_num, question):
         'action': 'moved to the left of the sofa','target': 'pillow_2', 'nbox': [(174 185 214 215)]
     ]"""
 
-    system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+    # system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+
+    # human_template = """
+    # Instruction : {instruction}. Please remind the condition.
+
+    # Bounding Box Coordinates: {bounding_box_coordinates}
+
+    # The output is returned in the form of a dictionary.
+    # Output:"""
+
+    #few shot template!
+    template = """
+    Let’s imagine you’re a semantic parser. I’ll provide specific bounding box coordinates and
+    instructions. These coordinates represent the [(left corner x, y values), (right corner x, y values)]
+    of the bounding box. Extract the action and target from the instructions and new bounding
+    box coordinates, noting the association between bounding box coordinates and the target. Also,
+    bounding box coordinates should not exceed the frame size [(0,0), (512, 512)].  Then, adjust the
+    bounding box using expected values and display the resulting coordinates as the output. Let’s think step by step.
+
+    condition : 
+    First, please maintain the width-to-height ratio of the box.
+    ecute the instruction with the left corner x, y values of the box fixed unless the object is moving.
+    Third, represent the coordinates as integers.
+
+    For example:
+    
+    Bounding Box Coordinates: [
+        'Sofa_0 [105 226 363 387]', 
+        'Table_1 [45 284 102 378]', 
+        'Pillow_2 [257 227 297 300]', 
+        'Pillow_3 [139 224 172 297]', 
+        'Pillow_4 [170 226 208 301]', 
+        'Table_5 [174 348 294 439] 
+    ]
+        
+    Example 1:
+    Instruction: "Enlarge the rightmost table."
+    Original Bounding Box: 'Table_5 [174 348 294 439]'
+    Output: ['action': 'enlarged', 'target': 'Table_5', 'original_box': [(174, 348, 294, 439)], 'new_box': [(164, 338, 304, 449)]]
+
+    Example 2:
+    Instruction: "Move the leftmost pillow down."
+    Original Bounding Box: 'Pillow_3 [139 224 172 297]'
+    Output:  ['action': 'moved down', 'target': 'Pillow_3', 'original_box': [(139, 224, 172, 297)], 'new_box': [(139, 214, 172, 287)]]
+    Example 3:
+    Instruction: "Shift the middle pillow to the right."
+    Original Bounding Box: 'Pillow_4 [170 226 208 301]'
+    Output: ['action': 'moved to the right', 'target': 'Pillow_4', 'original_box': [(170, 226, 208, 301)], 'new_box': [(190, 226, 228, 301)]]
+
+    Example 4:
+    Instruction: "Reduce the size of the leftmost table."
+    Original Bounding Box: 'Table_1 [45 284 102 378]'
+    Output: ['action': 'reduced in size', 'target': 'Table_1', 'original_box': [(45, 284, 102, 378)], 'new_box': [(55, 294, 92, 368)]]
+        
+    """
+
+    # system_message_prompt = SystemMessagePromptTemplate.from_template(template)
 
     human_template = """
     Instruction : {instruction}. Please remind the condition.
@@ -418,7 +474,12 @@ def gpt_grounded_sam(image_nname, ex_num, question):
     Bounding Box Coordinates: {bounding_box_coordinates}
 
     The output is returned in the form of a dictionary.
-    Output:"""
+    The bounding box coordinates should be interpreted as [(bottom left x, y), (top right x, y)]
+    
+    Output:
+    
+    """
+
 
     chat_prompt = ChatPromptTemplate.from_messages([
         ("system", template),
