@@ -103,3 +103,9 @@
    {'i_name': 'img_7.jpeg', 'target': 'tree_0', 'question': 'Move the tree downward.', 'nbox': [140.0, 150.0, 387.0, 557.0], 'original_bbox': array([140.61212 ,  52.844376, 387.56567 , 459.24713 ], dtype=float32)}
 58
    {'i_name': 'img_7.jpeg', 'target': 'tree_0', 'question': 'Move the tree downward.', 'nbox': [140.0, 188.0, 387.0, 495.0], 'original_bbox': array([140.61212 ,  52.844376, 387.56567 , 459.24713 ], dtype=float32)}
+24
+   {'i_name': 'img_1.jpeg', 'target': 'books_1', 'question': 'Place the books on the drawers onto the bed.', 'nbox': [216.0, 262.0, 259.0, 273.0], 'original_bbox': array([ 58.417175, 262.7397  , 101.04266 , 273.19397 ], dtype=float32)}
+25
+   {'i_name': 'img_1.jpeg', 'target': 'drawers_0', 'question': 'Enlarge the size of the drawers by 1.5 times.', 'nbox': [80.0, 362.0, 124.0, 403.0], 'original_bbox': array([ 80.7318 , 362.3095 , 123.53438, 402.91278], dtype=float32)}
+58
+   {'i_name': 'img_7.jpeg', 'target': 'tree_0', 'question': 'Move the tree downward.', 'nbox': [140.0, 154.0, 387.0, 561.0], 'original_bbox': array([140.61212 ,  52.844376, 387.56567 , 459.24713 ], dtype=float32)}

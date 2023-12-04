@@ -11,8 +11,8 @@ img_0.jpeg: Move the left frame diagonally down to the right.
 img_0.jpeg: Place the red pillow on the leftmost sofa.
 img_0.jpeg: Move the left frame to the left by 20px.
 img_0.jpeg: Halve the size of the TV.
-img_1.jpeg: Increase the size of the chest of drawers.
-img_1.jpeg: Decrease the size of the chest of drawers.
+img_1.jpeg: Increase the size of the drawers.: 14
+img_1.jpeg: Decrease the size of the drawers.: 15
 img_1.jpeg: Move the frame to the left.
 img_1.jpeg: Move the frame to the right.
 img_1.jpeg: Move the frame upward.
@@ -21,8 +21,8 @@ img_1.jpeg: Move the frame diagonally down to the left.
 img_1.jpeg: Move the frame diagonally up to the right.
 img_1.jpeg: Move the frame diagonally up to the left.
 img_1.jpeg: Move the frame diagonally down to the right.
-img_1.jpeg: Place the books on the chest of drawers onto the bed.
-img_1.jpeg: Enlarge the size of the chest of drawers by 1.5 times.
+img_1.jpeg: Place the books on the drawers onto the bed.: 24
+img_1.jpeg: Enlarge the size of the drawers by 1.5 times.: 25
 img_1.jpeg: Move the frame downward by 15px.
 img_4.jpeg: Move the lamp to the left.
 img_4.jpeg: Move the lamp to the right.

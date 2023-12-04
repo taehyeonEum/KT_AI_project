@@ -40,7 +40,7 @@ def gpt_grounded_sam(image_nname, ex_num, question):
 
     Question: {question} 
     """
-    OPEN_AI_API_KEY =  "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"
+    OPEN_AI_API_KEY =  "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"
 
     prompt = PromptTemplate(template=template, input_variables=["question"])
     llm = OpenAI(model_name="gpt-3.5-turbo",openai_api_key=OPEN_AI_API_KEY)

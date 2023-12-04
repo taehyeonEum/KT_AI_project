@@ -256,7 +256,7 @@ def inpainting(idx, result, ex_num):
         prompt = "background"
 
         guidance_scale=9
-        num_samples = 3
+        num_samples = 1
         generator = torch.Generator(device="cuda").manual_seed(1) # change the seed to get different results
 
         images = pipe(

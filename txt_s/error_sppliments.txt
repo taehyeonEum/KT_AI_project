@@ -37,3 +37,7 @@ ex_num: 56_image_name: img_7.jpeg_question: Move the tree to the right._error: i
 ex_num: 58_image_name: img_7.jpeg_question: Move the tree downward._error: images do not match
 ex_num: 11_image_name: img_0.jpeg_question: Place the red pillow on the leftmost sofa._error: 'red pillow'
 ex_num: 58_image_name: img_7.jpeg_question: Move the tree downward._error: images do not match
+ex_num: 24_image_name: img_1.jpeg_question: Place the books on the drawers onto the bed._error: Incorrect API key provided: sk-DjIeH***************************************OAoi. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 25_image_name: img_1.jpeg_question: Enlarge the size of the drawers by 1.5 times._error: Incorrect API key provided: sk-DjIeH***************************************OAoi. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 58_image_name: img_7.jpeg_question: Move the tree downward._error: Incorrect API key provided: sk-DjIeH***************************************OAoi. You can find your API key at https://platform.openai.com/account/api-keys.
+ex_num: 58_image_name: img_7.jpeg_question: Move the tree downward._error: images do not match
