@@ -13,3 +13,12 @@ CUDA_VISIBLE_DEVICES=0 python langchain.py 2>&1 | tee -a ./logs/langchain_1109_1
 CUDA_VISIBLE_DEVICES=0 python langchain_je.py 2>&1 | tee -a ./logs/langchain_1109_4.log
 
 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
+
+ex_number_question_series3.txt 
+정량적 평가를 기반으로 좋은 prompt를 다시 적어줌. 
+
+main4.py 
+input, output path, api 등을 메인문에서 입력할 수 있도록 코드를 수정함. 
+
+outputs_..._fewshot 
+folder is about outputs which template is fewshot and question is update with quantitative experiment.

@@ -7,17 +7,27 @@ import os
 if __name__=="__main__":
 
     # 마지막 실험 번호, question 읽어오기
-    f=open("./txt_s/ex_number_question_series2.txt", "r")
+    f=open("./txt_s/ex_number_question_series3.txt", "r")
     lines = f.readlines()
     f.close()
 
     ex_num = 1
     INPUT_DIR = "./content"
-    GROUNDED_SAM_OUTPUT_DIR = "./outputs_grounded_sam_newTempl"
-    INPAINTING_OUTPUT_DIR = "./outputs_inpainting_newTempl"
-    OPENAI_API = "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"
+    GROUNDED_SAM_OUTPUT_DIR = "./outputs_grounded_sam_fewshot"
+    INPAINTING_OUTPUT_DIR = "./outputs_inpainting_fewshot"
+    OPENAI_API = "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" #key_1204
+    QUANTITATIVE_LOG = "./outputs_grounded_sam_fewshot/quantitative_log.txt"
+    os.makedirs(GROUNDED_SAM_OUTPUT_DIR, exist_ok=True)
+    os.makedirs(INPAINTING_OUTPUT_DIR, exist_ok=True)
+
+    f = open(QUANTITATIVE_LOG, 'w')
+    f.close()
 
     for line in lines:
+
+        f = open(QUANTITATIVE_LOG, 'a')
+        f.write(f"EX_{ex_num}")
+        f.close()
 
         image_name = line.split(": ")[0]
         question = line.split(": ")[1]
@@ -25,7 +35,7 @@ if __name__=="__main__":
         # try: 
         #     ex_num = int(line.split(": ")[2])
         try:
-            # while_count = 0
+            while_count = 0
                 
             print("\n\n\n***************************************")
             print("***************************************")
@@ -33,18 +43,20 @@ if __name__=="__main__":
             print(f"experiment number : {ex_num}")
             print(f"experiment question : {question}")
             print("in main gpt_grounded_sam process...")
-            results = gpt_grouded_sam.gpt_grounded_sam(image_name, ex_num, question, INPUT_DIR, GROUNDED_SAM_OUTPUT_DIR, OPENAI_API)
+            while True:
+                is_done, results = gpt_grouded_sam.gpt_grounded_sam(image_name, ex_num, question, INPUT_DIR, GROUNDED_SAM_OUTPUT_DIR, OPENAI_API, QUANTITATIVE_LOG)
+                if is_done:
+                    break
+                while_count = while_count + 1
 
-            # while True:
-            # print(f"while count: {while_count}")
+                
+            print(f"while count: {while_count}")
             for i, result in enumerate(results):
                 print("\n\n\n------------------------------------")
                 print(f"in main {i}th inpainting process...")
                 print(f"result: {result}")
-                OUTPUT_DIR = inpainting.inpainting(i, result, ex_num, INPUT_DIR, GROUNDED_SAM_OUTPUT_DIR, INPAINTING_OUTPUT_DIR)
-                # while_count = while_count + 1
-                # if len(os.listdir(OUTPUT_DIR)) == 13:
-                #     break
+                is_done = inpainting.inpainting(i, result, ex_num, INPUT_DIR, GROUNDED_SAM_OUTPUT_DIR, INPAINTING_OUTPUT_DIR)
+            
 
         except Exception as e:
             f=open("./txt_s/error_sppliments.txt", 'a')

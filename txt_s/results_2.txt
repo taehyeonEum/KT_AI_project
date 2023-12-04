@@ -116,3 +116,28 @@
 3
 4
    {'i_name': 'img_0.jpeg', 'target': 'leftframe_0', 'question': 'Move the left frame to the right\n', 'nbox': [203.0, 146.0, 298.0, 223.0], 'original_bbox': array([203.66208, 146.0609 , 298.85184, 223.73265], dtype=float32)}
+1
+   {'i_name': 'img_0.jpeg', 'target': 'tv_0', 'question': 'Increase the size of the TV.\n', 'nbox': [204.0, 146.0, 298.0, 223.0], 'original_bbox': array([204.65659, 146.737  , 298.2512 , 223.31909], dtype=float32)}
+2
+3
+   {'i_name': 'img_0.jpeg', 'target': 'leftframe_0', 'question': 'Move the left frame to the left\n', 'nbox': [204.0, 146.0, 298.0, 223.0], 'original_bbox': array([204.12796, 146.40334, 298.4771 , 223.45564], dtype=float32)}
+4
+   {'i_name': 'img_0.jpeg', 'target': 'leftframe_0', 'question': 'Move the left frame to the right\n', 'nbox': [203.0, 146.0, 298.0, 223.0], 'original_bbox': array([203.66208, 146.0609 , 298.85184, 223.73265], dtype=float32)}
+5
+   {'i_name': 'img_0.jpeg', 'target': 'leftframe_0', 'question': 'Move the left frame upward\n', 'nbox': [204.0, 146.0, 298.0, 223.0], 'original_bbox': array([204.12796, 146.40334, 298.4771 , 223.45564], dtype=float32)}
+7
+   {'i_name': 'img_0.jpeg', 'target': 'left_frame_0', 'question': 'Move the left_frame diagonally down to the left\n', 'nbox': [204.0, 146.0, 298.0, 223.0], 'original_bbox': array([204.17123, 146.37985, 298.63257, 223.51682], dtype=float32)}
+8
+   {'i_name': 'img_0.jpeg', 'target': 'leftframe_0', 'question': 'Move the left frame diagonally up to the right\n', 'nbox': [203.66208, 146.0609, 298.85184, 223.73265], 'original_bbox': array([203.66208, 146.0609 , 298.85184, 223.73265], dtype=float32)}
+   {'i_name': 'img_0.jpeg', 'target': 'leftframe_1', 'question': 'Move the left frame diagonally up to the right\n', 'nbox': [213.0, 156.0, 308.0, 233.0], 'original_bbox': array([143.58545, 229.32759, 360.10794, 354.80655], dtype=float32)}
+9
+   {'i_name': 'img_0.jpeg', 'target': 'frame_0', 'question': 'Move the left frame diagonally up to the left\n', 'nbox': [96.0, 152.0, 139.0, 212.0], 'original_bbox': array([ 96.33257, 152.82683, 139.94913, 212.0276 ], dtype=float32)}
+10
+   {'i_name': 'img_0.jpeg', 'target': 'frame_0', 'question': 'Move the left frame diagonally down to the right.\n', 'nbox': [96.0, 152.0, 140.0, 212.0], 'original_bbox': array([ 96.33257, 152.82683, 139.94913, 212.0276 ], dtype=float32)}
+12
+   {'i_name': 'img_0.jpeg', 'target': 'leftframe_0', 'question': 'Move the left frame to the left by 20px.\n', 'nbox': [204.12796, 146.40334, 298.4771, 223.45564], 'original_bbox': array([204.12796, 146.40334, 298.4771 , 223.45564], dtype=float32)}
+   {'i_name': 'img_0.jpeg', 'target': 'leftframe_1', 'question': 'Move the left frame to the left by 20px.\n', 'nbox': [184.0, 146.40334, 298.4771, 223.45564], 'original_bbox': array([143.82492, 229.74527, 359.9104 , 354.6384 ], dtype=float32)}
+13
+   {'i_name': 'img_0.jpeg', 'target': 'tv_0', 'question': 'Halve the size of the TV.\n', 'nbox': [204.0, 146.0, 298.0, 223.0], 'original_bbox': array([204.62308, 146.70651, 298.29614, 223.34375], dtype=float32)}
+14
+   {'i_name': 'img_1.jpeg', 'target': 'drawers_0', 'question': 'Increase the size of the drawers.', 'nbox': [70.0, 352.0, 133.0, 413.0], 'original_bbox': array([ 80.7318 , 362.3095 , 123.53438, 402.91278], dtype=float32)}
