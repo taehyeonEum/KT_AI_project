@@ -380,7 +380,7 @@ def gpt_grounded_sam(image_nname, ex_num, question, input_dir, output_dir, opena
             def parse(self, text: str):
                 return text.strip().split(", ")
 
-        old_template = """
+        template = """
         Let’s imagine you’re a semantic parser. I’ll provide specific bounding box coordinates and
         instructions. These coordinates represent the [(left corner x, y values), (right corner x, y values)]
         of the bounding box. Extract the action and target from the instructions and new bounding
@@ -422,7 +422,7 @@ def gpt_grounded_sam(image_nname, ex_num, question, input_dir, output_dir, opena
         # Output:"""
 
         #few shot template!
-        template = """
+        new_template = """
         Let’s imagine you’re a semantic parser. I’ll provide specific bounding box coordinates and
         instructions. These coordinates represent the [(left corner x, y values), (right corner x, y values)]
         of the bounding box. Extract the action and target from the instructions and new bounding

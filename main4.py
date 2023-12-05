@@ -13,10 +13,10 @@ if __name__=="__main__":
 
     ex_num = 1
     INPUT_DIR = "./content"
-    GROUNDED_SAM_OUTPUT_DIR = "./outputs_grounded_sam_fewshot"
-    INPAINTING_OUTPUT_DIR = "./outputs_inpainting_fewshot"
-    OPENAI_API = "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" #key_1204
-    QUANTITATIVE_LOG = "./outputs_grounded_sam_fewshot/quantitative_log.txt"
+    GROUNDED_SAM_OUTPUT_DIR = "./outputs_grounded_sam_oneshot"
+    INPAINTING_OUTPUT_DIR = "./outputs_inpainting_oneshot"
+    OPENAI_API = "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" #key_1111
+    QUANTITATIVE_LOG = "./outputs_grounded_sam_oneshot/quantitative_log.txt"
     os.makedirs(GROUNDED_SAM_OUTPUT_DIR, exist_ok=True)
     os.makedirs(INPAINTING_OUTPUT_DIR, exist_ok=True)
 
@@ -26,7 +26,7 @@ if __name__=="__main__":
     for line in lines:
 
         f = open(QUANTITATIVE_LOG, 'a')
-        f.write(f"EX_{ex_num}")
+        f.write(f"EX_{ex_num}\n")
         f.close()
 
         image_name = line.split(": ")[0]
