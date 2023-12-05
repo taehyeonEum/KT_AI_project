@@ -411,15 +411,17 @@ def gpt_grounded_sam(image_nname, ex_num, question, input_dir, output_dir, opena
             'action': 'moved to the left of the sofa','target': 'pillow_2', 'nbox': [(174 185 214 215)]
         ]"""
 
-        # system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+        system_message_prompt = SystemMessagePromptTemplate.from_template(template)
 
-        # human_template = """
-        # Instruction : {instruction}. Please remind the condition.
+        human_template = """
+        Instruction : {instruction}. Please remind the condition.
 
-        # Bounding Box Coordinates: {bounding_box_coordinates}
+        Bounding Box Coordinates: {bounding_box_coordinates}
 
-        # The output is returned in the form of a dictionary.
-        # Output:"""
+        The output is returned in the form of a dictionary.
+        The bounding box coordinates should be interpreted as [(x_min, y_min, x_max, y_max)]
+
+        Output:"""
 
         #few shot template!
         new_template = """
@@ -469,17 +471,17 @@ def gpt_grounded_sam(image_nname, ex_num, question, input_dir, output_dir, opena
 
         # system_message_prompt = SystemMessagePromptTemplate.from_template(template)
 
-        human_template = """
-        Instruction : {instruction}. Please remind the condition.
+        # human_template = """
+        # Instruction : {instruction}. Please remind the condition.
 
-        Bounding Box Coordinates: {bounding_box_coordinates}
+        # Bounding Box Coordinates: {bounding_box_coordinates}
 
-        The output is returned in the form of a dictionary.
-        The bounding box coordinates should be interpreted as [(bottom left x, y), (top right x, y)]
+        # The output is returned in the form of a dictionary.
+        # The bounding box coordinates should be interpreted as [(bottom left x, y), (top right x, y)]
         
-        Output:
+        # Output:
         
-        """
+        # """
 
 
         chat_prompt = ChatPromptTemplate.from_messages([

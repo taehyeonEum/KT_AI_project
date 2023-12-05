@@ -15,7 +15,7 @@ if __name__=="__main__":
     INPUT_DIR = "./content"
     GROUNDED_SAM_OUTPUT_DIR = "./outputs_grounded_sam_oneshot"
     INPAINTING_OUTPUT_DIR = "./outputs_inpainting_oneshot"
-    OPENAI_API = "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" #key_1111
+    OPENAI_API = "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" #key_1111
     QUANTITATIVE_LOG = "./outputs_grounded_sam_oneshot/quantitative_log.txt"
     os.makedirs(GROUNDED_SAM_OUTPUT_DIR, exist_ok=True)
     os.makedirs(INPAINTING_OUTPUT_DIR, exist_ok=True)
