@@ -39,26 +39,26 @@ img_4.jpeg: Move the lamp size to the top-right by 20px diagonally.
 img_4.jpeg: Double the size of the mug.
 img_6.jpeg: Make bottom tomato bigger.
 img_6.jpeg: Make bottom tomato smaller.
-img_6.jpeg: Move the bottom tomato to the leftside.
-img_6.jpeg: Move the bottom tomato to the rightside.
-img_6.jpeg: Move the bottom tomato upside.
-img_6.jpeg: Move the bottom tomato downside.
-img_6.jpeg: Move the bottom tomato diagonally up to the left.
-img_6.jpeg: Move the bottom tomato diagonally up to the right.
-img_6.jpeg: Move the bottom tomato diagonally down to the left.
-img_6.jpeg: Move the bottom tomato diagonally down to the right.
-img_6.jpeg: Place the bottom tomato on top of the spoon.
-img_6.jpeg: Enlarge the size of the tomato by 3 times.
-img_6.jpeg: Move the tomato diagonally down and to the leftside by 20px.
+img_6.jpeg: Move bottom tomato to the leftside.
+img_6.jpeg: Move bottom tomato to the rightside.
+img_6.jpeg: Move bottom tomato upside.
+img_6.jpeg: Move bottom tomato downside.
+img_6.jpeg: Move bottom tomato diagonally up to the left.
+img_6.jpeg: Move bottom tomato diagonally up to the right.
+img_6.jpeg: Move bottom tomato diagonally down to the left.
+img_6.jpeg: Move bottom tomato diagonally down to the right.
+img_6.jpeg: Place bottom tomato on top of the spoon.
+img_6.jpeg: Enlarge the size of bottom tomato by 3 times.
+img_6.jpeg: Move bottom tomato diagonally down and to the leftside by 20px.
 img_7.jpeg: Make tree bigger.
 img_7.jpeg: Make tree smaller.
-img_7.jpeg: Move the tree to the leftside.
-img_7.jpeg: Move the tree to the rightside.
-img_7.jpeg: Move the tree upside.
-img_7.jpeg: Move the tree downside.
-img_7.jpeg: Move the tree diagonally up to the left.
-img_7.jpeg: Move the tree diagonally up to the right.
-img_7.jpeg: Move the tree diagonally down to the left.
-img_7.jpeg: Move the tree diagonally down to the right.
-img_7.jpeg: Move the tree to the rightside by 20px.
+img_7.jpeg: Move tree to the leftside.
+img_7.jpeg: Move tree to the rightside.
+img_7.jpeg: Move tree upside.
+img_7.jpeg: Move tree downside.
+img_7.jpeg: Move tree diagonally up to the left.
+img_7.jpeg: Move tree diagonally up to the right.
+img_7.jpeg: Move tree diagonally down to the left.
+img_7.jpeg: Move tree diagonally down to the right.
+img_7.jpeg: Move tree to the rightside by 20px.
 img_7.jpeg: Make tree smaller by 30%.

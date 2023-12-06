@@ -1,1 +1,11 @@
 EX_42
+   {'nbox': [0.0, 254.0, 44.0, 318.0], 'question': 'Move bottom tomato to the leftside.\n', 'target': 'bottomtomato_0', 'original_bbox': array([229.4277 , 254.61725, 273.826  , 318.03638], dtype=float32), 'i_name': 'img_6.jpeg'}
+EX_43
+EX_44
+EX_46
+   {'nbox': [191.0, 186.0, 235.0, 249.0], 'question': 'Move bottom tomato diagonally up to the left.\n', 'target': 'bottomtomato_0', 'original_bbox': array([229.4277 , 254.61725, 273.826  , 318.03638], dtype=float32), 'i_name': 'img_6.jpeg'}
+EX_47
+   {'nbox': [273.0, 318.0, 317.0, 382.0], 'question': 'Move bottom tomato diagonally up to the right.\n', 'target': 'bottomtomato_0', 'original_bbox': array([229.4277 , 254.61725, 273.826  , 318.03638], dtype=float32), 'i_name': 'img_6.jpeg'}
+EX_50
+EX_56
+   {'nbox': [389.0, 53.0, 736.0, 459.0], 'question': 'Move tree to the rightside.\n', 'target': 'tree_0', 'original_bbox': array([140.61212 ,  52.844376, 387.56567 , 459.24713 ], dtype=float32), 'i_name': 'img_7.jpeg'}

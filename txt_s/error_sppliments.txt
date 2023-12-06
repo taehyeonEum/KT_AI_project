@@ -485,3 +485,68 @@ ex_num: 43_image_name: img_6.jpeg_question: Move the bottom tomato to the rights
 _error: local variable 'result' referenced before assignment
 ex_num: 44_image_name: img_6.jpeg_question: Move the bottom tomato upside.
 _error: local variable 'result' referenced before assignment
+ex_num: 42_image_name: img_6.jpeg_question: Move the bottom tomato to the leftside.
+_error: local variable 'result' referenced before assignment
+ex_num: 43_image_name: img_6.jpeg_question: Move the bottom tomato to the rightside.
+_error: local variable 'result' referenced before assignment
+ex_num: 44_image_name: img_6.jpeg_question: Move the bottom tomato upside.
+_error: local variable 'result' referenced before assignment
+ex_num: 46_image_name: img_6.jpeg_question: Move the bottom tomato diagonally up to the left.
+_error: local variable 'result' referenced before assignment
+ex_num: 47_image_name: img_6.jpeg_question: Move the bottom tomato diagonally up to the right.
+_error: local variable 'result' referenced before assignment
+ex_num: 48_image_name: img_6.jpeg_question: Move the bottom tomato diagonally down to the left.
+_error: local variable 'result' referenced before assignment
+ex_num: 49_image_name: img_6.jpeg_question: Move the bottom tomato diagonally down to the right.
+_error: local variable 'result' referenced before assignment
+ex_num: 50_image_name: img_6.jpeg_question: Place the bottom tomato on top of the spoon.
+_error: local variable 'result' referenced before assignment
+ex_num: 51_image_name: img_6.jpeg_question: Enlarge the size of the tomato by 3 times.
+_error: local variable 'result' referenced before assignment
+ex_num: 52_image_name: img_6.jpeg_question: Move the tomato diagonally down and to the leftside by 20px.
+_error: local variable 'result' referenced before assignment
+ex_num: 54_image_name: img_7.jpeg_question: Make tree smaller.
+_error: local variable 'result' referenced before assignment
+ex_num: 57_image_name: img_7.jpeg_question: Move the tree upside.
+_error: local variable 'result' referenced before assignment
+ex_num: 60_image_name: img_7.jpeg_question: Move the tree diagonally up to the right.
+_error: local variable 'result' referenced before assignment
+ex_num: 61_image_name: img_7.jpeg_question: Move the tree diagonally down to the left.
+_error: local variable 'result' referenced before assignment
+ex_num: 62_image_name: img_7.jpeg_question: Move the tree diagonally down to the right.
+_error: local variable 'result' referenced before assignment
+ex_num: 63_image_name: img_7.jpeg_question: Move the tree to the rightside by 20px.
+_error: local variable 'result' referenced before assignment
+ex_num: 64_image_name: img_7.jpeg_question: Make tree smaller by 30%._error: local variable 'result' referenced before assignment
+ex_num: 42_image_name: img_6.jpeg_question: Move the bottom tomato to the leftside.
+_error: local variable 'result' referenced before assignment
+ex_num: 43_image_name: img_6.jpeg_question: Move the bottom tomato to the rightside.
+_error: local variable 'result' referenced before assignment
+ex_num: 43_image_name: img_6.jpeg_question: Move bottom tomato to the rightside.
+_error: local variable 'result' referenced before assignment
+ex_num: 44_image_name: img_6.jpeg_question: Move bottom tomato upside.
+_error: local variable 'result' referenced before assignment
+ex_num: 46_image_name: img_6.jpeg_question: Move bottom tomato diagonally up to the left.
+_error: local variable 'result' referenced before assignment
+ex_num: 47_image_name: img_6.jpeg_question: Move bottom tomato diagonally up to the right.
+_error: local variable 'result' referenced before assignment
+ex_num: 48_image_name: img_6.jpeg_question: Move bottom tomato diagonally down to the left.
+_error: local variable 'result' referenced before assignment
+ex_num: 42_image_name: img_6.jpeg_question: Move bottom tomato to the leftside.
+_error: local variable 'result' referenced before assignment
+ex_num: 43_image_name: img_6.jpeg_question: Move bottom tomato to the rightside.
+_error: local variable 'result' referenced before assignment
+ex_num: 44_image_name: img_6.jpeg_question: Move bottom tomato upside.
+_error: local variable 'result' referenced before assignment
+ex_num: 46_image_name: img_6.jpeg_question: Move bottom tomato diagonally up to the left.
+_error: local variable 'result' referenced before assignment
+ex_num: 47_image_name: img_6.jpeg_question: Move bottom tomato diagonally up to the right.
+_error: local variable 'result' referenced before assignment
+ex_num: 50_image_name: img_6.jpeg_question: Place bottom tomato on top of the spoon.
+_error: local variable 'result' referenced before assignment
+ex_num: 43_image_name: img_6.jpeg_question: Move bottom tomato to the rightside.
+_error: local variable 'result' referenced before assignment
+ex_num: 44_image_name: img_6.jpeg_question: Move bottom tomato upside.
+_error: local variable 'result' referenced before assignment
+ex_num: 50_image_name: img_6.jpeg_question: Place bottom tomato on top of the spoon.
+_error: local variable 'result' referenced before assignment
