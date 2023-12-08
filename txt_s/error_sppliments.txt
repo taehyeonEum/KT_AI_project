@@ -550,3 +550,7 @@ ex_num: 44_image_name: img_6.jpeg_question: Move bottom tomato upside.
 _error: local variable 'result' referenced before assignment
 ex_num: 50_image_name: img_6.jpeg_question: Place bottom tomato on top of the spoon.
 _error: local variable 'result' referenced before assignment
+EX_NUM: 1_question: Make monitor bigger_error: local variable 'result' referenced before assignment
+EX_NUM: 1_question: make the bottom tomato bigger_error: local variable 'result' referenced before assignment
+EX_NUM: 1_question: make bottom tomato much bigger_error: local variable 'result' referenced before assignment
+EX_NUM: 1_question: move bottom tomato left side_error: local variable 'result' referenced before assignment

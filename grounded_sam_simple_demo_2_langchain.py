@@ -382,7 +382,7 @@ def gpt_grounded_sam(image_nname, ex_num, question, input_dir, output_dir, opena
 
         template = """
         Let’s imagine you’re a semantic parser. I’ll provide specific bounding box coordinates and
-        instructions. These coordinates represent the [(left corner x, y values), (right corner x, y values)]
+        instructions. These coordinates represent the [left corner x, y values, right corner x, y values]
         of the bounding box. Extract the action and target from the instructions and new bounding
         box coordinates, noting the association between bounding box coordinates and the target. Also,
         bounding box coordinates should not exceed the frame size [(0,0), (512, 512)].  Then, adjust the
@@ -407,9 +407,13 @@ def gpt_grounded_sam(image_nname, ex_num, question, input_dir, output_dir, opena
             ]
         
         output = [
-            'action': 'the pillow located on the far right is reduced in area','target': 'pillow_2',  nbox': [(427 188 467 218)],
-            'action': 'moved to the left of the sofa','target': 'pillow_2', 'nbox': [(174 185 214 215)]
+            'action': 'the pillow located on the far right is reduced in area','target': 'pillow_2',  nbox': [(257 227 277 267)],
+            'action': 'moved to the left of the sofa','target': 'pillow_2', 'nbox': [(85 226 105 266)]
         ]"""
+
+        # 'action': 'the pillow located on the far right is reduced in area','target': 'pillow_2',  nbox': [(427 188 467 218)],
+        # 'action': 'moved to the left of the sofa','target': 'pillow_2', 'nbox': [(174 185 214 215)]
+
 
         system_message_prompt = SystemMessagePromptTemplate.from_template(template)
 

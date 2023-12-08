@@ -1,0 +1,2 @@
+EX_10
+   {'nbox': [41.0, 267.0, 74.0, 428.0], 'question': 'make drawer smaller', 'target': 'drawer_0', 'original_bbox': array([ 41.940033, 267.52594 , 128.2047  , 428.5639  ], dtype=float32), 'i_name': 'input_image.jpeg'}

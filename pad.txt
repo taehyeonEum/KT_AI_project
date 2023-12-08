@@ -23,3 +23,11 @@ chatgpt 파트에서 오류가 발생하면 while문 안에서 계속 돌아서 
 
 outputs_..._fewshot 
 folder is about outputs which template is fewshot and question is update with quantitative experiment.
+
+<gradio>
+
+워낙 코드를 저장하는 식으로 짜 놨으니 거기서 크게 변여하지 않고 gradio도 많이 저장하는 식으로
+코드를 짜는 것으로..!!
+
+gradio_index.txt라는 파일을 만들어서 그라디오 사용할 때마다 참조하는 것으로 방식은 맨 처음 올리고
+다시 저장하는 식으로 구성.
